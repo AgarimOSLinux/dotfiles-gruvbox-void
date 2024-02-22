@@ -45,23 +45,35 @@
     enable = true;
     xwayland.enable = true;
   };
+  # {{ PROTOCOL }}
+
+  # {{ ENV }}
   environment.sessionVariables = {
+    XDG_CURRENT_DESKTOP = "Hyprland";
+    XDG_SESSION_TYPE = "wayland";
+    XDG_SESSION_DESKTOP = "Hyprland";
+    QT_QPA_PLATFORM = "wayland";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    MOZ_ENABLE_WAYLAND = "1";
+    NIXOS_OZONE_ML = "1";
+    MOZ_ENABLE_WAYLAND = "1";
     NIXOS_OZONE_ML = "1";
   };
-  # {{ PROTOCOL }}
+  # {{ ENV }}
 
   # {{ APPS }}
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     # gui
-    kitty firefox anydesk
+    kitty anydesk
     telegram-desktop eww
     # net
     curl wget
     git atool
     # console
     bottom calc bunnyfetch
-    helix bash stow
+    helix bash stow fzf
     # utils
     mako hyprpaper wl-clipboard
     shotman slurp
@@ -71,10 +83,11 @@
     gnumake clang clang-tools
     python3 python311Packages.python-lsp-server
   ];
+  programs.firefox.enable = true;
   programs.mtr.enable = true;
   programs.gnupg.agent.enable = true;
   xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
   security.doas.enable = true;
   security.sudo.enable = false;
   security.doas.extraRules = [{
