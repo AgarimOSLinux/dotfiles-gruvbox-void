@@ -57,6 +57,7 @@
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     MOZ_ENABLE_WAYLAND = "1";
     NIXOS_OZONE_ML = "1";
+    SDL_VIDEODRIVER = "wayland";
   };
   # {{ ENV }}
 
@@ -109,9 +110,9 @@
   # {{ SOUND }}
 
   # {{ NETWORK }}
+  networking.hostName = "asspain";
   networking.firewall.enable = false;
   networking.useDHCP = lib.mkDefault true;
-  networking.hostName = "asspain";
   networking.networkmanager.enable = true;
   # {{ NETWORK }}
 
