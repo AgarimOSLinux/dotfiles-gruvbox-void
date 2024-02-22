@@ -49,12 +49,14 @@
 
   # {{ ENV }}
   environment.sessionVariables = {
+    GDK_SCALE = "2";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_TYPE = "wayland";
     XDG_SESSION_DESKTOP = "Hyprland";
     QT_QPA_PLATFORM = "wayland";
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    QT_ENABLE_HIDPI_SCALING = "1";
     MOZ_ENABLE_WAYLAND = "1";
     NIXOS_OZONE_ML = "1";
     SDL_VIDEODRIVER = "wayland";
@@ -82,11 +84,15 @@
     gnumake clang clang-tools
     python3 python311Packages.python-lsp-server
   ];
+  services.dbus.enable = true;
   programs.firefox.enable = true;
   programs.mtr.enable = true;
   programs.gnupg.agent.enable = true;
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  };
   security.doas.enable = true;
   security.sudo.enable = false;
   security.doas.extraRules = [{
