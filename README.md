@@ -2,10 +2,9 @@
 
 No description for now!
 
->You can pass flags to `build` script.
+>You can pass flags to `switch` script.
 
 # Tasks
 
-- [ ] OS (`nix`);
-- [ ] Bar (`eww`);
-- [ ] WM (`hypr`);
+- Bar (`eww`);
+- WM (`hypr`);

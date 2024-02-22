@@ -14,11 +14,11 @@
 
   # {{ FILESYSTEM }}
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/badb5c4f-c6f4-4af9-8679-dbfa831b252c";
+    device = "/dev/disk/by-uuid/7341951a-b379-40b4-b32e-4c327d8e0b25";
     fsType = "ext4";
   };
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/0FF7-40E8";
+    device = "/dev/disk/by-uuid/D410-78DA";
     fsType = "vfat";
   };
   swapDevices = [ ];
@@ -70,8 +70,7 @@
     kitty anydesk
     telegram-desktop eww
     # net
-    curl wget
-    git atool
+    curl wget atool
     # console
     bottom calc bunnyfetch
     helix bash stow fzf
@@ -84,6 +83,22 @@
     gnumake clang clang-tools
     python3 python311Packages.python-lsp-server
   ];
+  programs.git = {
+    enable = true;
+#    extraConfig = {
+#      credential.helper = "${
+#        pkgs.git.override { withLibsecret = true; }
+#      }/bin/git-credential-libsecret";
+#    };
+#    aliases = {
+#      ci = "commit";
+#      co = "checkout";
+#      p = "pull";
+#      s = "status";
+#    };
+#    userName = "fidelicura";
+#    userEmail = "fidelicura@gmail.com";
+  };
   services.dbus.enable = true;
   programs.firefox.enable = true;
   programs.mtr.enable = true;
