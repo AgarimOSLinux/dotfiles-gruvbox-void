@@ -55,8 +55,7 @@
   environment.systemPackages = with pkgs; [
     # gui
     kitty firefox anydesk
-    telegram-desktop
-    wofi eww
+    telegram-desktop eww
     # net
     curl wget
     git atool
