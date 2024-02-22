@@ -84,6 +84,7 @@
     keepEnv = true;
     persist = true;
   }];
+  virtualisation.docker.enable = true;
   # {{ APPS }}
 
   # {{ SOUND }}
