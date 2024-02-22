@@ -31,7 +31,7 @@ alias vpn="wireproxy -c $HOME/.config/vpn/stable.conf"
 
 # {{ FUNCTIONS }}
 function cd() { command cd "$@"; ls; }
-function clear() { command clear; ufetch; echo; ls; }
+function clear() { command clear; bunnyfetch; echo; ls; }
 
 function bashclear() {
     history -c && history -w

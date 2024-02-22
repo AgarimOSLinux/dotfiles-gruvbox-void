@@ -16,7 +16,7 @@
   fileSystems."/" = {
     device = "/dev/disk/by-label/main";
     fsType = "ext4";
-    encrypted.enable = true;
+    # encrypted.enable = true;
   };
   fileSystems."/boot" = {
     device = "/dev/disk/by-label/boot";
@@ -52,16 +52,17 @@
   # {{ PROTOCOL }}
 
   # {{ APPS }}
+  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     # gui
     kitty firefox anydesk
     telegram-desktop
-    wofi ewww
+    wofi eww
     # net
     curl wget
     git atool
     # console
-    bottom calc ufetch
+    bottom calc bunnyfetch
     helix bash stow
     # utils
     mako hyprpaper wl-clipboard
