@@ -65,6 +65,7 @@
     helix bash stow
     # utils
     mako hyprpaper wl-clipboard
+    shotman slurp
     # dev
     zig zls
     ghc haskellPackages.lsp
