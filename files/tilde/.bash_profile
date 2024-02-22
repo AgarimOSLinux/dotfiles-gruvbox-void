@@ -34,4 +34,3 @@ export XDG_MUSIC_DIR=$HOME/documents/music
 export XDG_PICTURES_DIR=$HOME/documents/pictures
 export XDG_VIDEOS_DIR=$HOME/documents/videos
 # {{ XDG }}
-. "$HOME/.cargo/env"

@@ -67,4 +67,3 @@ function doc() {
 # {{ ON STARTUP }}
 clear
 # {{ ON STARTUP }}
-. "$HOME/.cargo/env"
