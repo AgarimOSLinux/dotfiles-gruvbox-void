@@ -57,8 +57,6 @@
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     MOZ_ENABLE_WAYLAND = "1";
     NIXOS_OZONE_ML = "1";
-    MOZ_ENABLE_WAYLAND = "1";
-    NIXOS_OZONE_ML = "1";
   };
   # {{ ENV }}
 
