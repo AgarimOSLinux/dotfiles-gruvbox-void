@@ -70,7 +70,7 @@
     kitty anydesk
     telegram-desktop eww
     # net
-    curl wget atool
+    curl wget atool wireproxy
     # console
     bottom calc bunnyfetch
     helix bash stow fzf

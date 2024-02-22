@@ -4,4 +4,4 @@ mkdir -p $HOME/projects &&
 mkdir -p $HOME/downloads &&
 mkdir -p $HOME/books &&
 mkdir -p $HOME/notes &&
-mkdir -p $HOME/media &&
+mkdir -p $HOME/media
