@@ -76,7 +76,7 @@
     helix bash stow fzf
     # utils
     mako hyprpaper wl-clipboard
-    shotman slurp
+    shotman slurp brightnessctl
     # dev
     zig zls
     ghc haskellPackages.lsp
