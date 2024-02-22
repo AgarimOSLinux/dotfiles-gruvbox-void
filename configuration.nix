@@ -14,12 +14,11 @@
 
   # {{ FILESYSTEM }}
   fileSystems."/" = {
-    device = "/dev/disk/by-label/main";
+    device = "/dev/disk/by-uuid/badb5c4f-c6f4-4af9-8679-dbfa831b252c";
     fsType = "ext4";
-    # encrypted.enable = true;
   };
   fileSystems."/boot" = {
-    device = "/dev/disk/by-label/boot";
+    device = "/dev/disk/by-uuid/0FF7-40E8";
     fsType = "vfat";
   };
   swapDevices = [ ];

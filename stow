@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo -e "[\$] > Stowing config files...\n" &&
+echo -e "\n[\$] > Stowing config files...\n" &&
 cd files/ &&
 stow -t $HOME * &&
 echo -e "[\$] > Success!"
