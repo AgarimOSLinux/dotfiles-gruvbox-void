@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo -e "\n[\$] > Stowing Nix configuration..." &&
+su -c "ln -sf configuration.nix /etc/nixos/configuration.nix" &&
+echo &&
+
+echo -e "[\$] > Stowing local files...\n" &&
+cd files/ &&
+stow -t $HOME * &&
+
+echo -e "[\$] > Success!"

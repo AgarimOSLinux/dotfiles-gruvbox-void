@@ -1,0 +1,14 @@
+[flags]
+hide_avg_cpu = false
+left_legend = false
+temperature_type = "celsius"
+default_time_value = "60s"
+hide_time = true
+basic = false
+hide_table_gap = false
+disable_click = true
+color = "gruvbox"
+enable_gpu_memory = true
+enable_cache_memory = true
+group_processes = true
+mem_as_value = true

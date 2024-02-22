@@ -1,0 +1,7 @@
+[user]
+	email = fidelicura@gmail.com
+	name = fidelicura
+[credential]
+	helper = store
+[http]
+	postBuffer = 157286400
