@@ -68,7 +68,7 @@
   environment.systemPackages = with pkgs; [
     # gui
     kitty anydesk
-    telegram-desktop eww
+    telegram-desktop
     # net
     curl wget atool wireproxy
     # console
