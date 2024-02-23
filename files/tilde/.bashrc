@@ -19,11 +19,9 @@ source ~/.bash_profile
 # {{ ALIASES }}
 alias h="hx"
 alias py="python3"
+alias clip="wl-copy"
 alias ls="ls --color"
 alias ll="ls --color -lAh"
-alias xdg-open="handlr open"
-alias xclip="xclip -selection c"
-alias presenterm="presenterm --theme terminal-dark"
 alias vpn="wireproxy -c $HOME/.config/vpn/stable.conf"
 # {{ ALIASES }}
 
