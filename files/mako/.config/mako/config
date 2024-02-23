@@ -2,5 +2,16 @@ anchor=top-right
 font=lilex 14px
 background-color=#282828
 text-color=#ebdbb2
-border-color=#282828
-progress-color=over #ebdbb2
+border-size=2
+border-color=#ebdbb2
+default-timeout=2000
+
+[urgency=low]
+border-color=#ebdbb2
+
+[urgency=normal]
+border-color=#ebdbb2
+
+[urgency=high]
+border-color=#cc241d
+default-timeout=0

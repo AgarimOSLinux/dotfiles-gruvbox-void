@@ -25,12 +25,12 @@ window#waybar.hidden {
     color: #ebdbb2;
     background: transparent;
     padding: 5px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #workspaces button.persistent {
     color: #ebdbb2;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #workspaces button:hover {
@@ -43,7 +43,8 @@ window#waybar.hidden {
 }
 
 #workspaces button.focused {
-    color: #fe8019;
+    background-color: #fe8019;
+    color: #ebdbb2;
 }
 
 #language {
