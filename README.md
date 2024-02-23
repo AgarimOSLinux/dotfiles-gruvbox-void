@@ -6,5 +6,5 @@ No description for now!
 
 # Tasks
 
-- Bar (`eww`);
-- WM (`hypr`);
+- Screenshots (`shotman`);
+- Bar (`waybar`);
