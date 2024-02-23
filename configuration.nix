@@ -75,7 +75,7 @@
     rar zip
     unrar unzip
     gnutar xz
-    atool
+    atool scc
     # console
     bottom calc bunnyfetch
     helix bash stow fzf
@@ -108,7 +108,6 @@
 #    userEmail = "fidelicura@gmail.com";
   };
   services.dbus.enable = true;
-  programs.firefox.enable = true;
   programs.mtr.enable = true;
   programs.gnupg.agent.enable = true;
   xdg.portal = {
@@ -124,6 +123,63 @@
     persist = true;
   }];
   virtualisation.docker.enable = true;
+  let
+    lock-false = {};
+    lock-true = {};
+  in
+    {
+      programs.firefox = {
+        enable = true;
+        languagePacks = [ "en-US", "ru" ];
+        ExtensionSettings = {
+          "*".installation_mode = "blocked";
+          # ublock
+          "uBlock0@raymondhill.net" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+            insallation_mode = "force_installed";
+          };
+          # adblock
+          "adblockultimate@adblockultimate.net.xpi" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/adblocker-ultimate/latest.xpi";
+            insallation_mode = "force_installed";
+          };
+          # privacy badger
+          "jid1-MnnxcxisBPnSXQ@jetpack" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          # duckduckgo privacy extension
+          "jid1-ZAdIEUB7XOzOJw@jetpack.xpi" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/duckduckgo-for-firefox/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          # ghostery
+          "firefox@ghostery.com.xpi" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/ghostery/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          # clearurls
+          "{74145f27-f039-47ce-a470-a662b129930a}.xpi" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/clearurls/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          # stylus
+          "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}.xpi" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/styl-us/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          # EXTENSION TEMPLATE
+          # "EXTENSION_HASH" = {
+          #   install_url = "https://addons.mozilla.org/firefox/downloads/latest/EXTENSION_NAME/latest.xpi";
+          #   insallation_mode = "force_installed";
+          # };
+        };
+        Preferences = {
+          x
+        };
+      };
+    };
+  };
   # {{ APPS }}
 
   # {{ SOUND }}
