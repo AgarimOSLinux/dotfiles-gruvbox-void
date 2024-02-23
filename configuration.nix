@@ -68,7 +68,7 @@
   environment.systemPackages = with pkgs; [
     # gui
     kitty anydesk waybar
-    telegram-desktop
+    telegram-desktop zathura
     # net
     curl wget wireproxy
     # archivers
