@@ -86,7 +86,9 @@
     zig zls
     ghc haskellPackages.lsp
     gnumake clang clang-tools
-    python311Packages.python python311Packages.python-lsp-server
+    (python311.withPackages(ps: with ps; [
+      python-lsp-server wheel requests
+    ]))
   ];
   programs.git = {
     enable = true;
