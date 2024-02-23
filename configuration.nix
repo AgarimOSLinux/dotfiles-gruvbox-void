@@ -86,8 +86,7 @@
     zig zls
     ghc haskellPackages.lsp
     gnumake clang clang-tools
-    python311Packages.python python311Packages.pip
-    python311Packages.python-lsp-server
+    python311Packages.python python311Packages.python-lsp-server
   ];
   programs.git = {
     enable = true;
