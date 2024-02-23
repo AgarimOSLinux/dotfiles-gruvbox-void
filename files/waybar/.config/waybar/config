@@ -1,20 +1,12 @@
 {
     // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "height": 30, // Waybar height (to be removed for auto height)
+    "position": "top",
     "margin": "20 20 0 20",
-    // "width": 1280, // Waybar width
-    // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "hypr/language", "keyboard-state", "custom/pacman", "custom/mail", "hypr/mode"],
+    "modules-left": ["hyprland/workspaces", "keyboard-state", "custom/mail", "hyprland/mode"],
     "modules-center": ["clock", "custom/weather"],
-    "modules-right": ["pulseaudio", "custom/mem", "backlight", "battery", "tray"],
+    "modules-right": ["pulseaudio", "custom/mem", "temperature", "battery"],
 
-
-    //***************************
-    //*  Modules configuration  *
-    //***************************
-
-    "sway/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "persistent_workspaces": {
             "1": [],
@@ -24,47 +16,16 @@
         },
     },
 
-    "sway/language": {
-        "format": "{} ",
-	"min-length": 5,
-	"tooltip": false
-    },
-
     "keyboard-state": {
-        //"numlock": true,
         "capslock": true,
         "format": "{name} {icon} ",
         "format-icons": {
-            "locked": " ",
+            "locked": "",
             "unlocked": ""
         },
     },
 
-    "custom/pacman": {
-        "format": "{} ",
-        "interval": 3600,                     			// every hour
-        "exec": "(checkupdates;pacman -Qm | aur vercmp) | wc -l",	// # of updates
-        "exec-if": "exit 0",                  			// always run; consider advanced run conditions
-        "on-click": "foot sh -c 'yay; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar", // update system
-        "signal": 8,
-        "tooltip": false,
-    },
-
-    "custom/mail": {
-        "format": "{} ",
-        "exec": "$HOME/.config/waybar/scripts/mail.py",
-        "interval": 120,
-        "on-click": "google-chrome-stable https://mail.google.com/mail/u/0/#inbox ; pkill -SIGRTMIN+9 waybar",
-        "signal": 9,
-        "tooltip": false,
-    },
-
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-
     "clock": {
-        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%a, %d %b, %I:%M %p}"
     },
@@ -78,9 +39,9 @@
     },
 
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 1,
         "reverse-scrolling": 1,
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon} {format_source} ",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "婢 {format_source}",
@@ -95,32 +56,21 @@
             "car": "",
             "default": ["奄", "奔", "墳"]
         },
-        "on-click": "pavucontrol",
         "min-length": 13,
     },
 
     "custom/mem": {
-        "format": "{} ",
+        "format": "{} 󰍛",
         "interval": 3,
-        "exec": "free -h | awk '/Mem:/{printf $3}'",
+        "exec": "free -h | awk '/Mem:/{printf substr($3,  1,  4)}'",
         "tooltip": false,
     },
 
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", "", "", ""],
         "tooltip": false,
-    },
-
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{percent}% {icon}",
-        "format-icons": ["","","","", "", "", ""],
-        "min-length": 7,
     },
 
     "battery": {
@@ -129,15 +79,10 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", "", ""],
-	"on-update": "$HOME/.config/waybar/scripts/battery.sh",
-    },
-
-    "tray": {
-        "icon-size": 16,
-        "spacing": 0
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+	    "on-update": "$HOME/.config/waybar/scripts/battery.sh",
     },
 }
