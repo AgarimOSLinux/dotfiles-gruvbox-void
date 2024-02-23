@@ -67,10 +67,15 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     # gui
-    kitty anydesk
+    kitty anydesk waybar
     telegram-desktop
     # net
-    curl wget atool wireproxy
+    curl wget wireproxy
+    # archivers
+    rar zip
+    unrar unzip
+    tar xz
+    atool
     # console
     bottom calc bunnyfetch
     helix bash stow fzf
