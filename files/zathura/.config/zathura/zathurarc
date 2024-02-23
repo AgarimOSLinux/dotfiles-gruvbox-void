@@ -52,7 +52,7 @@ map [fullscreen] f toggle_fullscreen
 
 
 # {{ OPTIONS }}
-set font "Iosevka NF 14"
+set font "Lilex Nerd Font 14"
 
 set adjust-open "best-fit"
 set pages-per-row 1
