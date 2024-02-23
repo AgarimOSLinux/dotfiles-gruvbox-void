@@ -83,6 +83,7 @@
     mako hyprpaper wl-clipboard
     shotman slurp brightnessctl
     # dev
+    gdb
     zig zls
     ghc haskellPackages.lsp
     gnumake clang clang-tools

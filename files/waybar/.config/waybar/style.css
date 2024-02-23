@@ -126,7 +126,7 @@ window#waybar.hidden {
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+    background-color: #cc241d;
 }
 
 #backlight {
@@ -151,26 +151,17 @@ window#waybar.hidden {
 
 #battery.charging {
     color: #ebdbb2;
-    background-color: #26A65B;
+    background-color: #b8bb26;
 }
 
 #battery.warning:not(.charging) {
-    background-color: #ffbe61;
-    color: black;
+    background-color: #fabd2f;
+    color: #ebdbb2;
 }
 
 #battery.critical:not(.charging) {
     background-color: #cc241d;
     color: #ebdbb2;
-}
-
-#tray {
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ebdbb2;
-    background: #282828;
 }
 
 @keyframes blink {
