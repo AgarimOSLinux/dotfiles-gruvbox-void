@@ -74,7 +74,7 @@
     # archivers
     rar zip
     unrar unzip
-    tar xz
+    gnutar xz
     atool
     # console
     bottom calc bunnyfetch
