@@ -130,9 +130,10 @@
     persist = true;
   }];
   virtualisation.docker.enable = true;
-  programs.firefox = {
-    enable = true;
-    languagePacks = [ "en-US" "ru" ];
+  programs.firefox.enable = true;
+  # programs.firefox = {
+  #   enable = true;
+  #   languagePacks = [ "en-US" "ru" ];
     # profiles.fidelicura = {
     #   bookmarks = { };
     #   extensions = with pkgs.nur.repos.rycee.firefox-addons; [
@@ -264,8 +265,8 @@
     #     "media.ffmpeg.vaapi.enabled" = true;
     #     "gfx.webrender.all" = true;
     #   };
-    };
-  };
+    # };
+  # };
   # {{ APPS }}
 
   # {{ SOUND }}
