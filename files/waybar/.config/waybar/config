@@ -7,7 +7,7 @@
 
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "persistent_workspaces": {
+        "persistent-workspaces": {
             "1": [],
             "2": [],
             "3": [],
@@ -17,21 +17,21 @@
 
     "keyboard-state": {
         "capslock": true,
-        "format": "{name} {icon} ",
+        "format": "{name} {icon}",
         "format-icons": {
-            "locked": "",
-            "unlocked": ""
+            "locked": "",
+            "unlocked": ""
         },
     },
 
     "pulseaudio": {
         "scroll-step": 1,
         "reverse-scrolling": 1,
-        "format": "{volume}% {icon} {format_source} ",
+        "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "󰖁 {format_source}",
-        "format-source": "{volume}% ",
+        "format-muted": "-% 󰖁 {format_source}",
+        "format-source": " {volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -59,6 +59,7 @@
     },
 
     "backlight": {
+        "scroll-step": 5,
         "format": "{percent}% {icon}",
         "format-icons": ["󰃞", "󰃟", "󰃠"]
     },
