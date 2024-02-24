@@ -1,10 +1,9 @@
 {
-    // "layer": "top", // Waybar at top layer
     "position": "top",
     "margin": "20 20 0 20",
-    "modules-left": ["hyprland/workspaces", "keyboard-state", "custom/mail", "hyprland/mode"],
+    "modules-left": ["hyprland/workspaces", "keyboard-state", "pulseaudio"],
     "modules-center": ["clock", "custom/weather"],
-    "modules-right": ["pulseaudio", "custom/mem", "temperature", "battery"],
+    "modules-right": ["backlight",  "custom/mem", "temperature", "battery"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -25,6 +24,27 @@
         },
     },
 
+    "pulseaudio": {
+        "scroll-step": 1,
+        "reverse-scrolling": 1,
+        "format": "{volume}% {icon} {format_source} ",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "󰖁 {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "min-length": 13,
+    },
+
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%a, %d %b, %I:%M %p}"
@@ -38,25 +58,9 @@
         "return-type": "json"
     },
 
-    "pulseaudio": {
-        "scroll-step": 1,
-        "reverse-scrolling": 1,
-        "format": "{volume}% {icon} {format_source} ",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "婢 {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["奄", "奔", "墳"]
-        },
-        "min-length": 13,
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
     },
 
     "custom/mem": {
