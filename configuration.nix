@@ -14,11 +14,11 @@
 
   # {{ FILESYSTEM }}
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/7341951a-b379-40b4-b32e-4c327d8e0b25";
+    device = "/dev/disk/by-uuid/35e9c469-52c4-40f8-bc7a-f2490e669f17";
     fsType = "ext4";
   };
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/D410-78DA";
+    device = "/dev/disk/by-uuid/5521-59BB";
     fsType = "vfat";
   };
   swapDevices = [ ];
