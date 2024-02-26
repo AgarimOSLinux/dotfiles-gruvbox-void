@@ -7,4 +7,4 @@ No description for now!
 # Tasks
 
 - Screenshots (`shotman`);
-- Bar (`waybar`);
+- Browser (`librewolf`);
