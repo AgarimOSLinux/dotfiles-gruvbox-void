@@ -116,7 +116,6 @@
     persist = true;
   }];
   virtualisation.docker.enable = true;
-  programs.tmux.enable = true;
   # {{ APPS }}
 
   # {{ SOUND }}
