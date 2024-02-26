@@ -54,9 +54,8 @@ function nedit() {
     hx "$filepath"
 }
 
-function doc() {
-    local args="$@"
-    man "$args" | bat
+function wifi {
+    nmcli device wifi connect "$1" password "$2"
 }
 # {{ FUNCTIONS }}
 
