@@ -19,6 +19,7 @@ source ~/.bash_profile
 # {{ ALIASES }}
 alias h="hx"
 alias py="python3"
+alias wifi="nmtui"
 alias clip="wl-copy"
 alias ls="ls --color"
 alias ll="ls --color -lAh"
@@ -52,10 +53,6 @@ function nsync() {
 function nedit() {
     local filepath=$(find $HOME/notes/ -not -path '*/.*' | fzf)
     hx "$filepath"
-}
-
-function wifi {
-    nmcli device wifi connect "$1" password "$2"
 }
 # {{ FUNCTIONS }}
 
