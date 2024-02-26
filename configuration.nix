@@ -5,7 +5,7 @@
 
   # {{ BOOT }}
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "rtsx_pci_sdmmc" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "amdgpu" ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
   boot.loader.systemd-boot.enable = true;
@@ -117,10 +117,10 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-hyprland
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal-wlr
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
     ];
   };
   security.doas.enable = true;
@@ -158,8 +158,10 @@
   # {{ CPU }}
 
   # {{ GPU }}
-  hardware = {
-    opengl.enable = true;
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
   };
   # {{ GPU }}
   
