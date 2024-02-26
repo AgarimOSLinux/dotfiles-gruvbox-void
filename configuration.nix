@@ -70,7 +70,7 @@
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     # gui
-    kitty anydesk waybar floorp
+    kitty anydesk waybar librewolf
     telegram-desktop zathura
     # net
     curl wget wireproxy
@@ -95,22 +95,7 @@
       python-lsp-server wheel requests
     ]))
   ];
-  programs.git = {
-    enable = true;
-#    extraConfig = {
-#      credential.helper = "${
-#        pkgs.git.override { withLibsecret = true; }
-#      }/bin/git-credential-libsecret";
-#    };
-#    aliases = {
-#      ci = "commit";
-#      co = "checkout";
-#      p = "pull";
-#      s = "status";
-#    };
-#    userName = "fidelicura";
-#    userEmail = "fidelicura@gmail.com";
-  };
+  programs.git.enable = true;
   services.dbus.enable = true;
   programs.mtr.enable = true;
   programs.gnupg.agent.enable = true;
@@ -131,7 +116,6 @@
     persist = true;
   }];
   virtualisation.docker.enable = true;
-  # programs.firefox.enable = true;
   # {{ APPS }}
 
   # {{ SOUND }}
