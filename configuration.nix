@@ -87,6 +87,7 @@
     shotman slurp brightnessctl
     appimage-run
     # dev
+    wayland wayland-protocols
     gdb
     zig zls
     ghc haskellPackages.lsp
