@@ -87,9 +87,9 @@
     shotman slurp brightnessctl
     appimage-run
     # dev
-    wayland wayland-protocols
     gdb
     zig zls
+    rustc cargo rustfmt clippy rust-analyzer
     ghc haskellPackages.lsp
     gnumake clang clang-tools
     (python311.withPackages(ps: with ps; [
