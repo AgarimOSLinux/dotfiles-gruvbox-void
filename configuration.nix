@@ -85,7 +85,7 @@
     # utils
     mako hyprpaper wl-clipboard
     shotman slurp brightnessctl
-    appimage-run
+    appimage-run findutils.locate
     # dev
     gdb
     zig zls
