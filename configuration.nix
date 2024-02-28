@@ -89,6 +89,7 @@
     # dev
     gdb
     zig zls
+    nil
     rustc cargo rustfmt clippy rust-analyzer
     ghc haskellPackages.lsp
     gnumake clang clang-tools
