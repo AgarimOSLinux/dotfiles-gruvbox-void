@@ -17,7 +17,6 @@ source ~/.bash_profile
 
 
 # {{ ALIASES }}
-alias h="hx"
 alias py="python3"
 alias wifi="nmtui"
 alias clip="wl-copy"
