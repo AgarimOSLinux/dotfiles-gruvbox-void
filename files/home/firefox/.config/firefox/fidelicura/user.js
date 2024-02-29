@@ -64,6 +64,8 @@ user_pref("privacy.trackingprotection.pbmode.enabled", true);
 user_pref("privacy.donottrackheader.enabled", true);
 user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36");
 user_pref("privacy.resistFingerprinting", true);
+user_pref("browser.search.region", "UK");
+user_pref("doh-rollout.home-region", "UK");
 
 /** OCSP & CERTS / HPKP ***/
 user_pref("security.OCSP.enabled", 0);
@@ -259,3 +261,6 @@ user_pref("media.videocontrols.picture-in-picture.enabled", false);
 
 /** DISABLE INTERNAL LANGUAGE TRANSLATOR **/
 user_pref("browser.translations.neverTranslateLanguages", true);
+
+/** ENABLE GRUVBOX THEME **/
+user_pref("extensions.activeThemeID", "{d3f8e52b-140d-41e8-ae4a-a9710ab6a886}");
