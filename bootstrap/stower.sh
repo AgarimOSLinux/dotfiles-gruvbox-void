@@ -1,10 +1,6 @@
 #!/bin/bash
 
-
-
 ./hierarchy.sh
-
-
 
 echo -e "\n[$] > Stowing configuration files..." &&
 cd ../files/home/ &&
