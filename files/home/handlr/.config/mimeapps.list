@@ -1,0 +1,6 @@
+[Added Associations]
+
+[Default Applications]
+application/pdf=org.pwmt.zathura.desktop;
+image/*=firefox.desktop;
+text/*=Helix.desktop;

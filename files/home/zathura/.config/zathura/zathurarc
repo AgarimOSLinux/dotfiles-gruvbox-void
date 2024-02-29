@@ -1,0 +1,68 @@
+# {{ COLORS }}
+set notification-error-bg       "#282828" 
+set notification-error-fg       "#fabd2f" 
+set notification-warning-bg     "#282828" 
+set notification-warning-fg     "#fabd2f" 
+set notification-bg             "#282828" 
+set notification-fg             "#b8bb26" 
+
+set completion-bg               "#504945" 
+set completion-fg               "#ebdbb2" 
+set completion-group-bg         "#3c3836" 
+set completion-group-fg         "#928374" 
+set completion-highlight-bg     "#83a598" 
+set completion-highlight-fg     "#504945" 
+
+set index-bg                    "#504945" 
+set index-fg                    "#ebdbb2" 
+set index-active-bg             "#83a598" 
+set index-active-fg             "#504945" 
+
+set inputbar-bg                 "#282828" 
+set inputbar-fg                 "#ebdbb2" 
+
+set statusbar-bg                "#504945" 
+set statusbar-fg                "#ebdbb2" 
+
+set highlight-color             "#fabd2f" 
+set highlight-active-color      "#fe8019" 
+
+set default-bg                  "#282828" 
+set default-fg                  "#ebdbb2" 
+
+set render-loading              true
+set render-loading-bg           "#282828" 
+set render-loading-fg           "#ebdbb2" 
+
+set recolor-lightcolor          "#282828" 
+set recolor-darkcolor           "#ebdbb2" 
+# {{ COLORS }}
+
+
+
+# {{ KEYBINDINGS }}
+unmap c
+map c recolor
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+# {{ KEYBINDINGS }}
+
+
+
+# {{ OPTIONS }}
+set font "Iosevka NF 14"
+
+set adjust-open "best-fit"
+set pages-per-row 1
+
+set selection-clipboard clipboard
+set show-recent 0
+
+set scroll-step 50
+set scroll-page-aware "true"
+set smooth-scroll "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+# {{ OPTIONS }}

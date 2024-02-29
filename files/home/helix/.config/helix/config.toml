@@ -1,0 +1,19 @@
+theme = "gruvbox"
+
+[editor]
+line-number = "relative"
+mouse = false
+rulers = [80]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "file-type"]
+center = ["file-name", "spinner"]
+right = ["file-line-ending", "position"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "VISUAL"
