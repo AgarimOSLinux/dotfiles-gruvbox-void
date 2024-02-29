@@ -1,3 +1,0 @@
-#!/bin/sh
-
-su -c "nixos-rebuild switch -I nixos-config=configuration.nix $1"

@@ -1,7 +1,0 @@
-#!/bin/sh
-
-echo -e "\n[\$] > Stowing config files...\n" &&
-cd files/ &&
-stow -t $HOME * &&
-fc-cache -f -v &&
-echo -e "[\$] > Success!"
