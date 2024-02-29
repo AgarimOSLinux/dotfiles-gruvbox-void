@@ -30,7 +30,13 @@ I love Void Linux. It is **simple**, **bloatless** and **cozy**.
 
 # Extensions
 
-- 
+- `uBlock`, named: `uBlock0@raymondhill.net.xpi`;
+- `AdBlock`, named: `adblockultimate@adblockultimate.net.xpi`;
+- `Ghostery`, named: `firefox@ghostery.com.xpi`;
+- `Privacy Badger`, named: `jid1-MnnxcxisBPnSXQ@jetpack.xpi`;
+- `DuckDuckGo Privacy Essentials`, named: `jid1-ZAdIEUB7XOzOJw@jetpack.xpi`;
+- `ClearURLs`, named: `{74145f27-f039-47ce-a470-a662b129930a}.xpi`;
+- `Stylus`, named: `{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}.xpi`;
 
 # Bootstraping
 
