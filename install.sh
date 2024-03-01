@@ -52,7 +52,7 @@ $INST -Suyv linux linux-firmware linux-headers \
     bash git curl wget scc \
     man-db man-pages man-pages-devel man-pages-posix \
     clang clang-tools-extra python3 zig zls fasm \
-    gdb make python3-pip python3-wheel pkg-config docker \
+    gdb make python3-pip python3-wheel python3-requests pkg-config docker \
     kitty helix fzf stow telegram-desktop \
     steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit \
     shotman slurp wl-clipboard wlr-randr handlr fonts-roboto-ttf \
