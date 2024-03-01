@@ -5,7 +5,7 @@ mkdir -p $HOME/notes
 mkdir -p $HOME/books
 mkdir -p $HOME/media
 
-mkdir -p $HOME/.config
+mkdir -p $HOME/.config/firefox
 mkdir -p $HOME/.local/share/fonts
 mkdir -p $HOME/.local/share/icons
 mkdir -p $HOME/.local/share/themes
