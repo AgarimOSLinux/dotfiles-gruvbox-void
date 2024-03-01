@@ -51,7 +51,7 @@ riverctl border-color-unfocused 0xebdbb2
 # {{ LAYOUT }}
 riverctl default-layout rivertile
 
-rivertile spawn "-view-padding 6 -outer-padding 6"
+rivertile -view-padding 6 -outer-padding 50 &
 # {{ LAYOUT }}
 
 
@@ -61,10 +61,10 @@ riverctl map normal Super W close
 riverctl map normal Super F toggle-float
 riverctl map normal Super S toggle-fullscreen
 
-riverctl map normal Super H move left 100
-riverctl map normal Super J move down 100
-riverctl map normal Super K move up 100
-riverctl map normal Super L move right 100
+riverctl map normal Super J focus-view next
+riverctl map normal Super K focus-view previous
+riverctl map normal Super+Shift J swap next
+riverctl map normal Super+Shift K swap previous
 
 for i in $(seq 1 9)
 do
