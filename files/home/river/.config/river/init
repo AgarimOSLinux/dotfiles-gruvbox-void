@@ -51,7 +51,7 @@ riverctl border-color-unfocused 0xebdbb2
 # {{ LAYOUT }}
 riverctl default-layout rivertile
 
-rivertile -view-padding 6 -outer-padding 50 -main-location right &
+rivertile -view-padding 10 -outer-padding 10 -main-location right &
 # {{ LAYOUT }}
 
 
@@ -95,7 +95,7 @@ riverctl spawn "mako"
 riverctl spawn "pipewire"
 riverctl spawn "pipewire-pulse"
 riverctl spawn "wbg ~/.config/bg/bg.jpg"
-riverctl spawn "wlr-randr --output eDP-1 --custom-mode 2880x1800@120Hz --scale 1.5"
+riverctl spawn "wlr-randr --output eDP-1 --custom-mode 2880x1800@120Hz --adaptive-sync disabled --scale 2"
 riverctl spawn "wpctl ser-volume -l 2 @DEFAULT_AUDIO_SINK@ 40%"
 riverctl spawn "brightnessctl set 80%"
 riverctl spawn "waybar"
