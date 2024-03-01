@@ -26,6 +26,16 @@ riverctl map normal Super+Shift R spawn riverctl
 
 
 
+# {{ TOUCHPAD }}
+riverctl input pointer-1739-52981-SYNA0A00:00_06CB:CEF5_Touchpad disable-while-typing enabled
+riverctl input pointer-1739-52981-SYNA0A00:00_06CB:CEF5_Touchpad middle-emulation enabled
+riverctl input pointer-1739-52981-SYNA0A00:00_06CB:CEF5_Touchpad scroll-method two-finger
+riverctl input pointer-1739-52981-SYNA0A00:00_06CB:CEF5_Touchpad natural-scroll enabled
+riverctl input pointer-1739-52981-SYNA0A00:00_06CB:CEF5_Touchpad tap enabled
+# {{ TOUCHPAD }}
+
+
+
 # {{ THEME }}
 riverctl default-layout rivertile
 riverctl background-color 0x002b36
@@ -67,7 +77,7 @@ done
 
 
 # {{ AUTOSTART }}
-riverctl spawn "wlr-randr --output eDP-1 --custom-mode 2880x1800@120Hz"
+riverctl spawn "wlr-randr --output eDP-1 --custom-mode 2880x1800@120Hz --scale 1.5"
 riverctl spawn "waybar"
 riverctl spawn "kitty"
 # {{ AUTOSTART }}

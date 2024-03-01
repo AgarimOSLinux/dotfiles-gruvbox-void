@@ -46,16 +46,16 @@ $INST -Suyv void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree &&
 $INST -Suyv linux linux-firmware linux-headers \
     mesa mesa-32bit glu glu-32bit vulkan-loader vulkan-loader-32bit \
     mesa-dri mesa-dri-32bit mesa-vulkan-radeon mesa-vaapi mesa-vdpau \
-    river Waybar wlr-randr brightnessctl \
+    river Waybar brightnessctl \
     opendoas dbus elogind pam_rundir dhcpcd chrony polkit openssl openssl-devel pipewire mako \
     zip unzip unrar tar xz atool \
     bash git curl wget scc \
     man-db man-pages man-pages-devel man-pages-posix \
     clang clang-tools-extra python3 zig zls fasm \
     gdb make python3-pip python3-wheel pkg-config docker \
-    wezterm helix fzf stow telegram-desktop \
+    kitty helix fzf stow telegram-desktop \
     steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit \
-    grimshot wl-clipboard handlr fonts-roboto-ttf \
+    grimshot wl-clipboard wlr-randr handlr fonts-roboto-ttf \
     bottom tree calc ufetch bat wireproxy \
     firefox zathura-pdf-mupdf &&
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |\
