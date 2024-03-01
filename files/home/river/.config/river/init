@@ -5,6 +5,7 @@
 # {{ GLOBALS }}
 riverctl set-repeat 50 300
 riverctl rule-add -app-id "bar" csd
+riverctl keyboard-layout -options grp:alt_shift_toggle us,ru
 # {{ GLOBALS }}
 
 
@@ -32,17 +33,26 @@ riverctl input pointer-1739-52981-SYNA0A00:00_06CB:CEF5_Touchpad middle-emulatio
 riverctl input pointer-1739-52981-SYNA0A00:00_06CB:CEF5_Touchpad scroll-method two-finger
 riverctl input pointer-1739-52981-SYNA0A00:00_06CB:CEF5_Touchpad natural-scroll enabled
 riverctl input pointer-1739-52981-SYNA0A00:00_06CB:CEF5_Touchpad tap enabled
+
+riverctl hide-cursor when-typing enabled
+riverctl focus-follows-cursor normal
 # {{ TOUCHPAD }}
 
 
 
 # {{ THEME }}
-riverctl default-layout rivertile
-riverctl background-color 0x002b36
-riverctl border-color-focused 0x93a1a1
-riverctl border-color-unfocused 0x586e75
-rivertile spawn "-view-padding 6 -outer-padding 6"
+riverctl border-width 3
+riverctl border-color-focused 0xd65d0e
+riverctl border-color-unfocused 0xebdbb2
 # {{ THEME }}
+
+
+
+# {{ LAYOUT }}
+riverctl default-layout rivertile
+
+rivertile spawn "-view-padding 6 -outer-padding 6"
+# {{ LAYOUT }}
 
 
 
@@ -77,6 +87,9 @@ done
 
 
 # {{ AUTOSTART }}
+riverctl spawn "mako"
+riverctl spawn "pipewire"
+riverctl spawn "pipewire-pulse"
 riverctl spawn "wlr-randr --output eDP-1 --custom-mode 2880x1800@120Hz --scale 1.5"
 riverctl spawn "waybar"
 riverctl spawn "kitty"
