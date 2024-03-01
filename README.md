@@ -45,6 +45,8 @@ Also, you are free to rewrite it to your own kind: I tried to make it as simple 
 There is not everything that I wanted to include in this bootstrap.
 To be "fully-qualified", you'll need to install [gruvbox](https://github.com/morhetz/gruvbox) themes for websites:
 - https://t.me/addtheme/qoopdata - Telegram;
-- https://userstyles.world/api/style/7261.user.css - YouTube;
+- https://userstyles.world/style/7261/gruvbox-for-youtube - YouTube;
 - https://userstyles.world/style/4653/gruvbox-github - Github;
 - https://userstyles.world/style/2326/discord-gruvbox - Discord;
+- https://userstyles.world/style/14924/perplexity-labs-gruvbox-dark-theme - Perplexity;
+- https://userstyles.world/style/6416/leetcode-customization - Leetcode;
