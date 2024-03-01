@@ -261,9 +261,3 @@ user_pref("media.videocontrols.picture-in-picture.enabled", false);
 
 /** DISABLE INTERNAL LANGUAGE TRANSLATOR **/
 user_pref("browser.translations.neverTranslateLanguages", true);
-
-/** ENABLE GRUVBOX THEME **/
-user_pref("extensions.activeThemeID", "{d3f8e52b-140d-41e8-ae4a-a9710ab6a886}");
-
-/** USE OWN FONT **/
-user_pref("font.name.serif.x-western", "Roboto");
