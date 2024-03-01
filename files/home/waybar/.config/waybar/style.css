@@ -3,6 +3,7 @@
     border-radius: 0;
     font-family: IosevkaTermSlab NFM;
     min-height: 20px;
+    font-size: 18px;
 }
 
 window#waybar {
@@ -27,12 +28,10 @@ window#waybar.hidden {
     color: #ebdbb2;
     background: transparent;
     padding: 5px;
-    font-size: 14px;
 }
 
 #workspaces button.persistent {
     color: #ebdbb2;
-    font-size: 14px;
 }
 
 #workspaces button:hover {

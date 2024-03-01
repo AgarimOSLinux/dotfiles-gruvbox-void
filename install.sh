@@ -30,7 +30,7 @@ function SERVICE() {
 }
 echo -e "\n[$] > Temporary environment shell variables successfully created!\n" &&
 echo -e "\n[$] > Updating $RIGHTS_USER system rights...\n" &&
-sudo usermod -aG audio,video,network,input,plugdev $RIGHTS_USER &&
+sudo usermod -aG audio,video,network,input,plugdev,power $RIGHTS_USER &&
 echo -e "\n[$] > $RIGHTS_USER system rights successfully updated!\n" &&
 
 
