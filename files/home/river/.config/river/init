@@ -10,7 +10,7 @@ riverctl rule-add -app-id "bar" csd
 
 
 # {{ APPS }}
-riverctl map normal Super Return spawn "foot"
+riverctl map normal Super Return spawn "kitty"
 riverctl map normal Super B spawn "firefox"
 riverctl map normal Super Z spawn "zathura"
 riverctl map normal Super T spawn "telegram-desktop"
@@ -67,6 +67,7 @@ done
 
 
 # {{ AUTOSTART }}
+riverctl spawn "wlr-randr --output eDP-1 --custom-mode 2880x1800@120Hz"
 riverctl spawn "waybar"
-riverctl spawn "foot"
+riverctl spawn "kitty"
 # {{ AUTOSTART }}

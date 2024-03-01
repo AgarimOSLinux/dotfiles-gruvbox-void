@@ -46,7 +46,7 @@ $INST -Suyv void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree &&
 $INST -Suyv linux linux-firmware linux-headers \
     mesa mesa-32bit glu glu-32bit vulkan-loader vulkan-loader-32bit \
     mesa-dri mesa-dri-32bit mesa-vulkan-radeon mesa-vaapi mesa-vdpau \
-    river Waybar brightnessctl \
+    river Waybar wlr-randr brightnessctl \
     opendoas dbus elogind pam_rundir dhcpcd chrony polkit openssl openssl-devel pipewire mako \
     zip unzip unrar tar xz atool \
     bash git curl wget scc \
