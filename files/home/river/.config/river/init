@@ -51,7 +51,7 @@ riverctl border-color-unfocused 0xebdbb2
 # {{ LAYOUT }}
 riverctl default-layout rivertile
 
-rivertile -view-padding 6 -outer-padding 50 &
+rivertile -view-padding 6 -outer-padding 50 -main-location right &
 # {{ LAYOUT }}
 
 
@@ -75,12 +75,16 @@ done
 
 for mode in normal locked
 do
-    riverctl map $mode None XF86AudioRaiseVolume  spawn "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-    riverctl map $mode None XF86AudioLowerVolume  spawn "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
+    riverctl map $mode None XF86AudioRaiseVolume  spawn "wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 5%+"
+    riverctl map $mode None XF86AudioLowerVolume  spawn "wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 5%-"
     riverctl map $mode None XF86AudioMute         spawn "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
     riverctl map $mode None XF86MonBrightnessUp   spawn "brightnessctl set 5%+"
     riverctl map $mode None XF86MonBrightnessDown spawn "brightnessctl set 5%-"
+
+    riverctl map $mode Super XF86AudioRaiseVolume spawn "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 5%+"
+    riverctl map $mode Super XF86AudioLowerVolume spawn "wpctl set-volume -l 1 @DEFAULT_AUDIO_SOURCE@ 5%-"
+    riverctl map $mode None XF86AudioMicMute      spawn "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
 done
 # {{ BINDINGS }}
 
@@ -92,6 +96,7 @@ riverctl spawn "pipewire"
 riverctl spawn "pipewire-pulse"
 riverctl spawn "wbg ~/.config/bg/bg.jpg"
 riverctl spawn "wlr-randr --output eDP-1 --custom-mode 2880x1800@120Hz --scale 1.5"
+riverctl spawn "brightnessctl set 80%"
 riverctl spawn "waybar"
 riverctl spawn "kitty"
 # {{ AUTOSTART }}
