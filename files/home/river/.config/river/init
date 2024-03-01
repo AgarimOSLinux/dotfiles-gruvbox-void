@@ -1,0 +1,72 @@
+#!/usr/bin/env sh
+
+
+
+# {{ GLOBALS }}
+riverctl set-repeat 50 300
+riverctl rule-add -app-id "bar" csd
+# {{ GLOBALS }}
+
+
+
+# {{ APPS }}
+riverctl map normal Super Return spawn "foot"
+riverctl map normal Super B spawn "firefox"
+riverctl map normal Super Z spawn "zathura"
+riverctl map normal Super T spawn "telegram-desktop"
+riverctl map normal Super P spawn "grimshot --notify copy area"
+# {{ APPS }}
+
+
+
+# {{ ROOT }}
+riverctl map normal Super+Shift Q exit
+riverctl map normal Super+Shift R spawn riverctl
+# {{ ROOT }}
+
+
+
+# {{ THEME }}
+riverctl default-layout rivertile
+riverctl background-color 0x002b36
+riverctl border-color-focused 0x93a1a1
+riverctl border-color-unfocused 0x586e75
+rivertile spawn "-view-padding 6 -outer-padding 6"
+# {{ THEME }}
+
+
+
+# {{ BINDINGS }}
+riverctl map normal Super W close
+riverctl map normal Super F toggle-float
+riverctl map normal Super S toggle-fullscreen
+
+riverctl map normal Super H move left 100
+riverctl map normal Super J move down 100
+riverctl map normal Super K move up 100
+riverctl map normal Super L move right 100
+
+for i in $(seq 1 9)
+do
+    tags=$((1 << ($i - 1)))
+
+    riverctl map normal Super $i set-focused-tags $tags
+done
+
+for mode in normal locked
+do
+    riverctl map $mode None XF86AudioRaiseVolume  spawn "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+    riverctl map $mode None XF86AudioLowerVolume  spawn "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
+    riverctl map $mode None XF86AudioMute         spawn "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+
+    riverctl map $mode None XF86MonBrightnessUp   spawn "brightnessctl set 5%+"
+    riverctl map $mode None XF86MonBrightnessDown spawn "brightnessctl set 5%-"
+done
+# {{ BINDINGS }}
+
+
+
+# {{ AUTOSTART }}
+riverctl spawn "waybar"
+riverctl spawn "foot"
+# {{ AUTOSTART }}

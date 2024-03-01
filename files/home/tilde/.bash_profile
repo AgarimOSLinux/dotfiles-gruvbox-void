@@ -1,6 +1,7 @@
 # {{ TTY }}
 if [[ "$(tty)" == "/dev/tty1" ]]; then
-    dbus-run-session sway
+    export LIBSEAT_BACKEND=logind
+    dbus-run-session river
 fi
 # {{ TTY }}
 
@@ -34,7 +35,7 @@ export ELM_SCALE=1
 export MOZ_ENABLE_WAYLAND=1
 
 export XKB_DEFAULT_LAYOUT=us
-export XKB_CURSORSIZE=48
+export XKB_CURSORSIZE=24
 # {{ WAYLAND }}
 
 
