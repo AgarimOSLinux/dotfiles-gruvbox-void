@@ -90,6 +90,7 @@ done
 riverctl spawn "mako"
 riverctl spawn "pipewire"
 riverctl spawn "pipewire-pulse"
+riverctl spawn "~/.config/bg/bg.jpg"
 riverctl spawn "wlr-randr --output eDP-1 --custom-mode 2880x1800@120Hz --scale 1.5"
 riverctl spawn "waybar"
 riverctl spawn "kitty"
