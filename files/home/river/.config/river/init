@@ -12,7 +12,7 @@ riverctl keyboard-layout -options grp:alt_shift_toggle us,ru
 
 # {{ APPS }}
 riverctl map normal Super Return spawn "kitty"
-riverctl map normal Super B spawn "firefox"
+riverctl map normal Super B spawn "firefox --profile ~/.config/firefox"
 riverctl map normal Super Z spawn "zathura"
 riverctl map normal Super T spawn "telegram-desktop"
 riverctl map normal Super P spawn "shotman --copy --capture region"
