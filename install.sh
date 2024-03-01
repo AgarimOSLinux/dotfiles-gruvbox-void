@@ -55,7 +55,7 @@ $INST -Suyv linux linux-firmware linux-headers \
     gdb make python3-pip python3-wheel pkg-config docker \
     kitty helix fzf stow telegram-desktop \
     steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit \
-    grimshot wl-clipboard wlr-randr handlr fonts-roboto-ttf \
+    shotman slurp wl-clipboard wlr-randr handlr fonts-roboto-ttf \
     bottom tree calc ufetch bat wireproxy \
     firefox zathura-pdf-mupdf &&
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |\

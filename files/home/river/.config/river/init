@@ -15,7 +15,7 @@ riverctl map normal Super Return spawn "kitty"
 riverctl map normal Super B spawn "firefox"
 riverctl map normal Super Z spawn "zathura"
 riverctl map normal Super T spawn "telegram-desktop"
-riverctl map normal Super P spawn "grimshot --notify copy area"
+riverctl map normal Super P spawn "shotman --copy --capture region"
 # {{ APPS }}
 
 
