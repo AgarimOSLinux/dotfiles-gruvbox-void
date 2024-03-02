@@ -101,6 +101,8 @@ echo -e "\n[$] > Ignored successfully!\n" &&
 
 echo -e "\n[$] > Creating symlinks...\n" &&
 sudo ln -sf $HOME/.local/share/applications/open /usr/bin/xdg-open &&
+sudo ln -sf /usr/bin/clang /usr/bin/cc &&
+sudo ln -sf /usr/bin/clang /usr/bin/cxx &&
 echo -e "\n[$] > Symlinks created successfully!\n" &&
 
 
