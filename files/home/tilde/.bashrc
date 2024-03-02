@@ -22,6 +22,7 @@ source ~/.bash_profile
 alias py="python3"
 alias ls="ls --color"
 alias ll="ls --color -lAh"
+alias bye="doas shutdown -P now"
 alias vpn="wireproxy -c $HOME/.config/vpn/stable.conf"
 # {{ ALIASES }}
 

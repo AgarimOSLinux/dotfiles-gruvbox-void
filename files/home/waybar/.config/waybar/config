@@ -40,7 +40,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["", "󰖀", "󰕾"]
         },
         "min-length": 13,
     },
