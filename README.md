@@ -50,3 +50,7 @@ To be "fully-qualified", you'll need to install [gruvbox](https://github.com/mor
 - https://userstyles.world/style/2326/discord-gruvbox - Discord;
 - https://userstyles.world/style/14924/perplexity-labs-gruvbox-dark-theme - Perplexity;
 - https://userstyles.world/style/6416/leetcode-customization - Leetcode;
+
+# Attention
+
+If you are faced with screen flickering/tearing problem, give [this possible solution](https://ljvmiranda921.github.io/notebook/2021/09/01/linux-thinkpad-screen-flicker/) a try.
