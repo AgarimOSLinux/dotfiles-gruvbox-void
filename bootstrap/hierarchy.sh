@@ -9,4 +9,5 @@ mkdir -p $HOME/.config/firefox
 mkdir -p $HOME/.local/share/fonts
 mkdir -p $HOME/.local/share/icons
 mkdir -p $HOME/.local/share/themes
+mkdir -p $HOME/.local/share/applications
 echo -e "\n[$] > Hierarchy created successfully!"
