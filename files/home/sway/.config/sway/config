@@ -2,6 +2,7 @@
     exec_always mako
     exec_always pipewire
     exec_always pipewire-pulse
+    exec_always waybar
 # {{ AUTORUN }}
 
 # {{ GLOBALS }}
@@ -14,8 +15,8 @@
 
     set $terminal kitty
     set $messenger telegram-desktop
-    set $browser firefox --profile ~/.config/firefox
     set $reader zathura
+    set $browser firefox --profile ~/.config/firefox
     set $screenshot grimshot --notify copy area
 
     set $sound_up wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
@@ -116,8 +117,6 @@ input type:keyboard {
 bar {
     position top
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 
     colors {
@@ -129,8 +128,19 @@ bar {
 # {{ STATUS }}
 
 # {{ THEME }}
+    gaps inner 8
+    gaps outer 8
+    corner_radius 10
+
     default_border none
     default_floating_border none
+
+    blur off
+
+    shadows on
+    shadows_on_csd off
+    shadow_blur_radius 20
+    shadow_color #0000007F
 # {{ THEME }}
 
 include /etc/sway/config.d/*
