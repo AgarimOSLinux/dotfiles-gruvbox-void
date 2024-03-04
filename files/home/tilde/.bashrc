@@ -52,7 +52,7 @@ function nsync() {
 }
 
 function nedit() {
-    local filepath=$(find $HOME/notes/content/ -not -path '*/.*' | fzf)
+    local filepath=$(find $HOME/notes -not -path '*/.*' | fzf)
     hx "$filepath"
 }
 # {{ FUNCTIONS }}
