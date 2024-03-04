@@ -53,3 +53,4 @@ To be "fully-qualified", you'll need to install [gruvbox](https://github.com/mor
 # Attention
 
 If you are faced with screen flickering/tearing problem, give [this possible solution](https://ljvmiranda921.github.io/notebook/2021/09/01/linux-thinkpad-screen-flicker/) a try.
+For myself: `output eDP-1 modeline 695.00 2880 2928 2960 3040 1800 1803 1809 1906 +hsync -vsync`

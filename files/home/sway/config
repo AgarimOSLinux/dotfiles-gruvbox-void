@@ -31,7 +31,7 @@
 # {{ WALLPAPER }}
 
 # {{ MONITOR }}
-	output eDP-1 modeline 682.75 2880 3128 3440 4000 1800 1803 1809 1897 -hsync +vsync
+	output eDP-1 modeline 695.00 2880 2928 2960 3040 1800 1803 1809 1906 +hsync -vsync
 # {{ MONITOR }}
 
 # {{ TOUCHPAD }}
