@@ -15,7 +15,7 @@ riverctl map normal Super Return spawn "kitty"
 riverctl map normal Super B spawn "firefox --profile ~/.config/firefox"
 riverctl map normal Super Z spawn "zathura"
 riverctl map normal Super T spawn "telegram-desktop"
-riverctl map normal Super P spawn "shotman --copy --capture region"
+riverctl map normal Super P spawn "~/.config/river/scripts/screenshot"
 # {{ APPS }}
 
 
@@ -60,6 +60,7 @@ rivertile -view-padding 10 -outer-padding 10 -main-location right &
 riverctl map normal Super W close
 riverctl map normal Super F toggle-float
 riverctl map normal Super S toggle-fullscreen
+riverctl map normal Super M spawn "~/.config/river/scripts/monitor"
 
 riverctl map normal Super J focus-view next
 riverctl map normal Super K focus-view previous
@@ -94,7 +95,7 @@ done
 riverctl spawn "mako"
 riverctl spawn "pipewire"
 riverctl spawn "pipewire-pulse"
-riverctl spawn "kanshi"
+riverctl spawn "~/.config/river/scripts/monitor"
 riverctl spawn "wbg ~/.config/bg/bg.jpg"
 riverctl spawn "wpctl ser-volume -l 2 @DEFAULT_AUDIO_SINK@ 40%"
 riverctl spawn "brightnessctl set 80%"

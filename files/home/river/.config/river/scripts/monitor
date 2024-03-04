@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+if pidof kanshi > /dev/null; then 
+  POSSIBLE=$(pidof kanshi)
+  kill $POSSIBLE
+  kanshi &
+else
+  kanshi &
+fi

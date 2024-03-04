@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+CURRENT="$HOME/screenshots/$(date +'%Y-%m-%d_%H-%M').png"
+grim -g "$(slurp)" $CURRENT
+wl-copy < $CURRENT
