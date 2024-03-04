@@ -2,6 +2,7 @@
 [[ $- != *i* ]] && return
 
 complete -cf doas
+complete -cf man
 # {{ INTERACTIVE }}
 
 
@@ -41,7 +42,7 @@ function bashclear() {
 function nsync() {
     local stamp="$(date +'%Y-%m-%d')"
 
-    pushd $HOME/documents/notes
+    pushd $HOME/notes
 
     git add . &&
     git commit -m "[script] $stamp" &&
@@ -51,7 +52,7 @@ function nsync() {
 }
 
 function nedit() {
-    local filepath=$(find $HOME/documents/notes/content/ -not -path '*/.*' | fzf)
+    local filepath=$(find $HOME/notes/content/ -not -path '*/.*' | fzf)
     hx "$filepath"
 }
 # {{ FUNCTIONS }}
