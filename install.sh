@@ -46,7 +46,7 @@ $INST -Suyv void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree &&
 $INST -Suyv linux linux-firmware linux-headers \
     mesa mesa-32bit glu glu-32bit vulkan-loader vulkan-loader-32bit \
     mesa-dri mesa-dri-32bit mesa-vulkan-radeon mesa-vaapi mesa-vdpau \
-    river Waybar wbg brightnessctl \
+    sway swaybg brightnessctl \
     opendoas dbus elogind pam_rundir dhcpcd chrony polkit openssl openssl-devel pipewire mako \
     zip unzip unrar tar xz atool \
     bash git curl wget scc \
@@ -55,7 +55,7 @@ $INST -Suyv linux linux-firmware linux-headers \
     gdb make python3-pip python3-wheel python3-requests pkg-config docker \
     kitty helix fzf stow telegram-desktop \
     steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit \
-    grim slurp wl-clipboard kanshi handlr fonts-roboto-ttf \
+    grimshot wl-clipboard handlr fonts-roboto-ttf \
     bottom tree calc ufetch bat wireproxy \
     firefox zathura-pdf-mupdf &&
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |\

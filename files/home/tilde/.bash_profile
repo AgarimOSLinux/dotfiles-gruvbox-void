@@ -1,7 +1,7 @@
 # {{ TTY }}
 if [[ "$(tty)" == "/dev/tty1" ]]; then
     export LIBSEAT_BACKEND=logind
-    dbus-run-session river
+    dbus-run-session sway
 fi
 # {{ TTY }}
 
