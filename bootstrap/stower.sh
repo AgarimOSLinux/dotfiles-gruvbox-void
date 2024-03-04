@@ -8,4 +8,4 @@ stow -t $HOME */ &&
 
 cd ../assets/ &&
 stow -t $HOME */ &&
-echo -e "\n[$] > Done!\n"
+echo -e "\n[$] > Done!"
