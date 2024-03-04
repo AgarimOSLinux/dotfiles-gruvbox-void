@@ -1,3 +1,0 @@
-profile "main" {
-	output eDP-1 modeline 934.00 2880 3136 3456 4032 1800 1803 1809 1931 -hsync +vsync
-}
