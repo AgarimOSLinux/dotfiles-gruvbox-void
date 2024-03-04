@@ -113,20 +113,6 @@ input type:keyboard {
     bindsym XF86MonBrightnessDown exec $brightness_down
 # {{ KEYBINDINGS }}
 
-# {{ STATUS }}
-bar {
-    position top
-
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ebdbb2
-        background #282828
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
-# {{ STATUS }}
-
 # {{ THEME }}
     gaps inner 8
     gaps outer 8
