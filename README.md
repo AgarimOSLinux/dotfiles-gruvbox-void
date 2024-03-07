@@ -47,10 +47,10 @@ To be "fully-qualified", you'll need to install [gruvbox](https://github.com/mor
 - https://userstyles.world/style/7261/gruvbox-for-youtube - YouTube;
 - https://userstyles.world/style/4653/gruvbox-github - Github;
 - https://userstyles.world/style/2326/discord-gruvbox - Discord;
-- https://userstyles.world/style/14924/perplexity-labs-gruvbox-dark-theme - Perplexity;
 - https://userstyles.world/style/6416/leetcode-customization - Leetcode;
 
 # Attention
 
 If you are faced with screen flickering/tearing problem, give [this possible solution](https://ljvmiranda921.github.io/notebook/2021/09/01/linux-thinkpad-screen-flicker/) a try.
-For myself: `output eDP-1 modeline 695.00 2880 2928 2960 3040 1800 1803 1809 1906 +hsync -vsync`
+
+>Note: `output eDP-1 modeline 695.00 2880 2928 2960 3040 1800 1803 1809 1906 +hsync -vsync`
