@@ -60,7 +60,6 @@ input type:keyboard {
 
     # apps
     bindsym $mod+Return exec $terminal
-    bindsym $mod+Shift+Return exec kitty
     bindsym $mod+b exec $browser
     bindsym $mod+t exec $messenger
     bindsym $mod+z exec $reader

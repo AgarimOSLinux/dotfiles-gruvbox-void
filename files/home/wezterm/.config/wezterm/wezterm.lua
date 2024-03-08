@@ -26,11 +26,12 @@ end)
 
 -- {{ THEME }} --
 config.color_scheme = "GruvboxDark"
+config.enable_tab_bar = false
 
 config.font = wezterm.font("Iosevka NF")
 config.font_size = 14.0
 
-config.enable_tab_bar = false
+config.window_background_opacity = 0.85
 config.window_padding = {
   left = 30,
   right = 30,
