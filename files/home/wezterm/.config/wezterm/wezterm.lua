@@ -28,8 +28,9 @@ end)
 config.color_scheme = "GruvboxDark"
 config.enable_tab_bar = false
 
-config.font = wezterm.font("Iosevka NF")
+config.font = wezterm.font("Monaspace Radon")
 config.font_size = 14.0
+config.cell_width = 0.9
 
 config.window_background_opacity = 0.85
 config.window_padding = {
