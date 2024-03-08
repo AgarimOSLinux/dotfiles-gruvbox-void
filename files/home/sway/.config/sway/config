@@ -2,6 +2,7 @@
     exec_always mako
     exec_always pipewire
     exec_always pipewire-pulse
+    exec_always wireplumber
     exec_always waybar
 # {{ AUTORUN }}
 
