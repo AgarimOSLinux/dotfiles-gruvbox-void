@@ -36,6 +36,7 @@ export ELM_SCALE=1
 export ELM_DISPLAY=wl
 
 export MOZ_ENABLE_WAYLAND=1
+export MOZ_DBUS_REMOTE=1
 
 export XKB_DEFAULT_LAYOUT=us
 export XKB_CURSORSIZE=24
