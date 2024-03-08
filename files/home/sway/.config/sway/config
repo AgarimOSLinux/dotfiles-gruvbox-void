@@ -13,7 +13,7 @@
     set $up k
     set $right l
 
-    set $terminal kitty
+    set $terminal wezterm
     set $messenger telegram-desktop
     set $reader zathura
     set $browser firefox --profile ~/.config/firefox
