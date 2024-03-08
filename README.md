@@ -23,7 +23,7 @@ I love Void Linux. It is **simple**, **bloatless** and **cozy**.
 - [x] System Monitor: [bottom](https://github.com/ClementTsang/bottom)
 - [x] MIME: [handlr](https://github.com/chmln/handlr) instead of [xdg-open](https://portland.freedesktop.org/doc/xdg-open.html)
 
->I often switch between [kitty](https://github.com/kovidgoyal/kitty) and [alacritty](https://github.com/alacritty/alacritty) terminals because of [ligature](https://github.com/alacritty/alacritty/issues/50) and [bitmap](https://github.com/kovidgoyal/kitty/issues/97) supports accordingly.
+>I often switch between [kitty](https://github.com/kovidgoyal/kitty) and [alacritty](https://github.com/alacritty/alacritty) terminals because of [ligature](https://github.com/alacritty/alacritty/issues/50) and [bitmap](https://github.com/kovidgoyal/kitty/issues/97) supports accordingly. But for now, I use [wezterm](https://github.com/wez/wezterm).
 
 # Extensions
 

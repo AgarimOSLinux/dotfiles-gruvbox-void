@@ -53,7 +53,7 @@ $INST -Suyv linux linux-firmware linux-headers \
     man-db man-pages man-pages-devel man-pages-posix \
     lua clang clang-tools-extra python3 fasm \
     lua-language-server gdb make python3-pip python3-wheel python3-requests pkg-config docker \
-    kitty helix fzf stow telegram-desktop mpv \
+    wezterm helix fzf stow telegram-desktop mpv \
     steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit \
     grimshot wl-clipboard handlr brightnessctl \
     bottom tree calc ufetch bat wireproxy \
