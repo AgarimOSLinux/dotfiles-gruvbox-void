@@ -1,6 +1,7 @@
 # {{ TTY }}
 if [[ "$(tty)" == "/dev/tty1" ]]; then
     export LIBSEAT_BACKEND=logind
+    export XDG_CURRENT_DESKTOP=sway
     dbus-run-session sway
 fi
 # {{ TTY }}
@@ -24,13 +25,15 @@ export LIBSEAT_BACKEND=logind
 export GDK_SCALE=1
 export GDK_BACKEND=wayland
 
-export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORM=wayland-egl
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export QT_ENABLE_HIDPI_SCALING=1
 
+export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_TYPE=wayland
 
 export ELM_SCALE=1
+export ELM_DISPLAY=wl
 
 export MOZ_ENABLE_WAYLAND=1
 
