@@ -18,6 +18,7 @@
     set $reader zathura
     set $browser firefox --profile ~/.config/firefox
     set $screenshot grimshot --notify copy area
+    set $games steam
 
     set $sound_up wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
     set $sound_down wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-
@@ -44,6 +45,12 @@ input type:touchpad {
 }
 # {{ TOUCHPAD }}
 
+# {{ MOUSE }}
+# input type:mouse {
+#     x   
+# }
+# {{ MOUSE }}
+
 # {{ LAYOUT }}
 input type:keyboard {
     xkb_layout us,ru
@@ -64,6 +71,7 @@ input type:keyboard {
     bindsym $mod+t exec $messenger
     bindsym $mod+z exec $reader
     bindsym $mod+p exec $screenshot
+    bindsym $mod+g exec $games
 
     # move focus
     bindsym $mod+$left focus left

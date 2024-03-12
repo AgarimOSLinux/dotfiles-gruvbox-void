@@ -1,13 +1,3 @@
-# {{ TTY }}
-if [[ "$(tty)" == "/dev/tty1" ]]; then
-    export LIBSEAT_BACKEND=logind
-    export XDG_CURRENT_DESKTOP=sway
-    dbus-run-session sway
-fi
-# {{ TTY }}
-
-
-
 # {{ CUSTOM }}
 export TERM=xterm-256color
 export EDITOR=hx
@@ -39,7 +29,7 @@ export MOZ_ENABLE_WAYLAND=1
 export MOZ_DBUS_REMOTE=1
 
 export XKB_DEFAULT_LAYOUT=us
-export XKB_CURSORSIZE=24
+export XKB_CURSORSIZE=36
 # {{ WAYLAND }}
 
 
@@ -68,3 +58,11 @@ export XDG_VIDEOS_DIR=$HOME/documents/videos
 # {{ PATH }}
 export PATH=$XDG_DATA_HOME/applications/zig:$XDG_DATA_HOME/applications/zls/bin:$PATH
 # {{ PATH }}
+
+
+
+# {{ TTY }}
+if [[ "$(tty)" == "/dev/tty1" ]]; then
+    dbus-run-session sway
+fi
+# {{ TTY }}
