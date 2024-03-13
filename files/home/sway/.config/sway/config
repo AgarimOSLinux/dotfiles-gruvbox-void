@@ -24,6 +24,10 @@
     set $sound_down wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-
     set $sound_mute wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 
+    set $mic_up wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SOURCE@ 5%+
+    set $mic_down wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SOURCE@ 5%-
+    set $mic_mute wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
     set $brightness_up brightnessctl set 5%+
     set $brightness_down brightnessctl set 5%-
 # {{ GLOBALS }}
@@ -112,13 +116,18 @@ input type:keyboard {
     bindsym $mod+f floating toggle
 
     # sound
-    bindsym XF86AudioRaiseVolume exec $sound_up
-    bindsym XF86AudioLowerVolume exec $sound_down
-    bindsym XF86AudioMute exec $sound_mute
+    bindsym $mod+XF86AudioRaiseVolume exec $sound_up
+    bindsym $mod+XF86AudioLowerVolume exec $sound_down
+    bindsym $mod+XF86AudioMute exec $sound_mute
+
+    # microphone
+    bindsym $mod+Shift+XF86AudioRaiseVolume exec $mic_up
+    bindsym $mod+Shift+XF86AudioLowerVolume exec $mic_down
+    bindsym $mod+XF86AudioMicMute exec $mic_mute
 
     # brightness
-    bindsym XF86MonBrightnessUp exec $brightness_up
-    bindsym XF86MonBrightnessDown exec $brightness_down
+    bindsym $mod+XF86MonBrightnessUp exec $brightness_up
+    bindsym $mod+XF86MonBrightnessDown exec $brightness_down
 # {{ KEYBINDINGS }}
 
 # {{ THEME }}

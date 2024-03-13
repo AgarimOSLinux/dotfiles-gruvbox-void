@@ -24,7 +24,7 @@ alias py="python3"
 alias ls="ls --color"
 alias ll="ls --color -lAh"
 alias bye="doas shutdown -P now"
-alias vpn="wireproxy -c $HOME/.config/vpn/stable.conf"
+alias vpn="wireproxy -c $HOME/.config/vpn/config.conf"
 # {{ ALIASES }}
 
 
@@ -54,6 +54,10 @@ function nsync() {
 function nedit() {
     local filepath=$(find $HOME/notes -not -path '*/.*' | fzf)
     hx "$filepath"
+}
+
+function share() {
+    wf-recorder --muxer=v4l2 --codec=rawvideo --file=/dev/video2 -x yuv420p
 }
 # {{ FUNCTIONS }}
 
