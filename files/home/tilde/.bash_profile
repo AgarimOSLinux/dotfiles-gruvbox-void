@@ -56,7 +56,7 @@ export XDG_VIDEOS_DIR=$HOME/documents/videos
 
 
 # {{ PATH }}
-export PATH=$XDG_DATA_HOME/applications/zig:$XDG_DATA_HOME/applications/zls/bin:$PATH
+export PATH=$XDG_DATA_HOME/applications:$XDG_DATA_HOME/applications/zig:$XDG_DATA_HOME/applications/zls/bin:$PATH
 # {{ PATH }}
 
 
