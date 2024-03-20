@@ -49,7 +49,7 @@ $INST -Suyv linux linux-firmware linux-headers \
     swayfx swaybg Waybar xdg-desktop-portal-wlr \
     opendoas dbus elogind pam_rundir dhcpcd chrony polkit openssl openssl-devel pipewire mako \
     zip unzip unrar tar xz atool \
-    bash git curl wget scc \
+    bash git curl wget scc NetworkManager \
     man-db man-pages man-pages-devel man-pages-posix \
     lua clang clang-tools-extra python3 fasm \
     lua-language-server gdb make python3-pip python3-wheel python3-requests pkg-config docker \
@@ -75,6 +75,7 @@ SERVICE polkitd &&
 SERVICE chronyd &&
 SERVICE pipewire &&
 SERVICE pipewire-pulse &&
+SERVICE NetworkManager &&
 echo -e "\n[$] > Services enabled successfully!\n" &&
 
 
