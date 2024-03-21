@@ -1,7 +1,7 @@
 echo -e "\n[$] > Creating folders hierarchy..."
 mkdir -p $HOME/downloads
 mkdir -p $HOME/projects
-mkdir -p $HOME/notes
+mkdir -p $HOME/personal
 mkdir -p $HOME/books
 mkdir -p $HOME/media
 
