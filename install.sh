@@ -43,7 +43,7 @@ echo -e "\n[$] > System successfully updated!\n" &&
 
 echo -e "\n[$] > Installing libraries, tools, programming languages and apps...\n" &&
 $INST -Suyv void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree &&
-$INST -Suyv linux linux-firmware linux-headers \
+$INST -Suyv linux linux-firmware linux-headers os-prober \
     mesa mesa-32bit glu glu-32bit vulkan-loader vulkan-loader-32bit \
     mesa-dri mesa-dri-32bit mesa-vulkan-radeon mesa-vaapi mesa-vdpau \
     swayfx swaybg Waybar xdg-desktop-portal-wlr \
@@ -54,7 +54,6 @@ $INST -Suyv linux linux-firmware linux-headers \
     lua clang clang-tools-extra python3 fasm \
     lua-language-server gdb make python3-pip python3-wheel python3-requests pkg-config docker \
     wezterm helix fzf stow telegram-desktop mpv \
-    steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit \
     grimshot wl-clipboard handlr brightnessctl \
     bottom tree calc ufetch bat wireproxy \
     firefox zathura-pdf-mupdf &&
@@ -86,9 +85,9 @@ echo -e "\n[$] > PAM initialized successfully!\n" &&
 
 
 
-echo -e "\n[$] > Changing GRUB config to skip choice part...\n" &&
-sudo sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' /etc/default/grub &&
-sudo update-grub &&
+echo -e "\n[$] > Changing GRUB config...\n" &&
+sudo os-prober &&
+sudo grub-mkconfig -o /boot/grub/grub.cfg &&
 echo -e "\n[$] > GRUB config changed successfully!\n" &&
 
 
@@ -108,20 +107,20 @@ echo -e "\n[$] > Symlinks created successfully!\n" &&
 
 
 
-echo -e "\n[$] > Removing 'sudo' package...\n" &&
-sudo xbps-remove -Roy sudo &&
-echo -e "\n[$] > Removed successfully!\n" &&
-
-
-
 echo -e "\n[$] > Stowing configuration files...\n" &&
-su -c "ln -sf /usr/share/fontconfig/conf.avail/70-yes-bitmaps.conf /etc/fonts/conf.d/" &&
-su -c "xbps-reconfigure -f fontconfig" &&
+sudo ln -sf /usr/share/fontconfig/conf.avail/70-yes-bitmaps.conf /etc/fonts/conf.d/ &&
+sudo xbps-reconfigure -f fontconfig &&
 rm -f $HOME/.bashrc &&
 rm -f $HOME/.bash_profile &&
 rm -f $HOME/.profile &&
 ./stower.sh &&
 echo -e "\n[$] > Configuration files successfully stowed!\n" &&
+
+
+
+echo -e "\n[$] > Removing 'sudo' package...\n" &&
+sudo xbps-remove -Roy sudo &&
+echo -e "\n[$] > Removed successfully!\n" &&
 
 
 
