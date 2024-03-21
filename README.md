@@ -34,7 +34,7 @@ I love Void Linux. It is **simple**, **bloatless** and **cozy**.
 - `ClearURLs`, named: `{74145f27-f039-47ce-a470-a662b129930a}.xpi`;
 - `Stylus`, named: `{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}.xpi`;
 - `Proxy Toggle`, named: `{0c3ab5c8-57ac-4ad8-9dd1-ee331517884d}.xpi`;
-- ``, named: `{7c4b7a20-26d8-4788-a840-71fa26d332e0}.xpi`;
+- `Gruvbox Dark Theme`, named: `{7c4b7a20-26d8-4788-a840-71fa26d332e0}.xpi`;
 
 # Bootstraping
 
