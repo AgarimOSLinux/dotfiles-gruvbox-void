@@ -14,8 +14,8 @@ I love Void Linux. It is **simple**, **bloatless** and **cozy**.
 - [x] Distro: [void](https://voidlinux.org/) because it is © ["just based"](https://youtu.be/rRFIlBIYCBY?feature=shared&t=9)
 - [x] Theme: [gruvbox](https://github.com/morhetz/gruvbox)
 - [x] Font: [bigblueterm](https://int10h.org/blog/2015/12/bigblue-terminal-oldschool-fixed-width-font/);
-- [x] WM: [river](https://github.com/riverwm/river)
-- [x] Notifications: [mako]()
+- [x] WM: [swayfx](https://github.com/WillPower3309/swayfx)
+- [x] Notifications: [mako](https://github.com/emersion/mako)
 - [x] Shell: [bash](https://www.gnu.org/software/bash) with [custom scripts](/files/home/tilde/.bashrc)
 - [x] Text Editor: [helix](https://github.com/helix-editor/helix)
 - [x] Browser: [firefox](https://www.mozilla.org/en-US/firefox/new/) with custom [user.js](/configs/firefox/.mozilla/firefox/main.main/user.js)
@@ -33,6 +33,8 @@ I love Void Linux. It is **simple**, **bloatless** and **cozy**.
 - `Privacy Badger`, named: `jid1-MnnxcxisBPnSXQ@jetpack.xpi`;
 - `ClearURLs`, named: `{74145f27-f039-47ce-a470-a662b129930a}.xpi`;
 - `Stylus`, named: `{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}.xpi`;
+- `Proxy Toggle`, named: `{0c3ab5c8-57ac-4ad8-9dd1-ee331517884d}.xpi`;
+- ``, named: `{7c4b7a20-26d8-4788-a840-71fa26d332e0}.xpi`;
 
 # Bootstraping
 
@@ -47,7 +49,6 @@ To be "fully-qualified", you'll need to install [gruvbox](https://github.com/mor
 - https://userstyles.world/style/7261/gruvbox-for-youtube - YouTube;
 - https://userstyles.world/style/4653/gruvbox-github - Github;
 - https://userstyles.world/style/2326/discord-gruvbox - Discord;
-- https://userstyles.world/style/6416/leetcode-customization - Leetcode;
 
 # Attention
 
