@@ -56,7 +56,7 @@ function nedit() {
 }
 
 function share() {
-    wf-recorder --muxer=v4l2 --codec=rawvideo --file=/dev/video2 -x yuv420p
+    wf-recorder --muxer=v4l2 --codec=rawvideo --file=/dev/video4 -x yuv420p
 }
 # {{ FUNCTIONS }}
 

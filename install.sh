@@ -80,8 +80,9 @@ echo -e "\n[$] > Services enabled successfully!\n" &&
 
 
 
-echo -e "\n[$] > Initializing PAM...\n" &&
+echo -e "\n[$] > Initializing PAM and mod probing virtual webcam...\n" &&
 echo "-session   optional   pam_rundir.so" | sudo tee -a /etc/pam.d/system-login &&
+sudo modprobe v4l2loopback exclusive_caps=1 card_label=VirtualVideoDevice
 echo -e "\n[$] > PAM initialized successfully!\n" &&
 
 
