@@ -40,6 +40,7 @@
 
 # {{ MONITOR }}
 	output eDP-1 modeline 695.00 2880 2928 2960 3040 1800 1803 1809 1906 +hsync -vsync
+    output HDMI-A-1 modeline 217.75 1920 2064 2264 2608 1080 1083 1088 1129 -hsync +vsync
 # {{ MONITOR }}
 
 # {{ TOUCHPAD }}
