@@ -62,6 +62,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |\
     sh -s -- -y --profile minimal --default-toolchain stable &&
 source "$HOME/.cargo/env" &&
 rustup component add rust-analyzer clippy rustfmt &&
+bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)" &&
+opam init &&
+eval $(opam env) &&
+opam install ocaml-lsp-server odoc ocamlformat utop &&
 echo -e "\n[$] > Libraries, tools, programming languages and apps are succesfully installed!\n" &&
 
 

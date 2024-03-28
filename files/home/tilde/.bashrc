@@ -56,6 +56,7 @@ function nedit() {
 }
 
 function share() {
+    doas modprobe v4l2loopback exclusive_caps=1 card_label=VirtualVideoDevice
     wf-recorder --muxer=v4l2 --codec=rawvideo --file=/dev/video4 -x yuv420p
 }
 # {{ FUNCTIONS }}

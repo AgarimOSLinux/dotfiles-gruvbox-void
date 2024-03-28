@@ -65,3 +65,6 @@ if [[ "$(tty)" == "/dev/tty1" ]]; then
     dbus-run-session sway
 fi
 # {{ TTY }}
+
+# opam configuration
+test -r /home/fidelicura/.opam/opam-init/init.sh && . /home/fidelicura/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true

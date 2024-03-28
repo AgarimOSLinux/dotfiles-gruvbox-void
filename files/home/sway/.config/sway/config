@@ -5,6 +5,7 @@
     exec_always waybar
     exec_always udiskie
     exec_always wireproxy -c $HOME/.config/vpn/config.conf
+    exec_always $HOME/.config/sway/share.sh
 # {{ AUTORUN }}
 
 # {{ GLOBALS }}
