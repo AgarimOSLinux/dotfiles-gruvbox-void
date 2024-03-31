@@ -1,4 +1,4 @@
 CompileFlags:
-  Add: [-std=c99, -Wall, -Wextra, -Werror, -pedantic-errors]
+  Add: [-xc, -std=c99, -Wall, -Wextra, -Werror, -pedantic-errors]
   Remove: -W*
-  Compiler: clang
+  Compiler: gcc
