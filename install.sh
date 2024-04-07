@@ -46,7 +46,7 @@ $INST -Suyv void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree &&
 $INST -Suyv linux linux-firmware linux-headers os-prober \
     mesa mesa-32bit glu glu-32bit vulkan-loader vulkan-loader-32bit \
     mesa-dri mesa-dri-32bit mesa-vulkan-radeon mesa-vaapi mesa-vdpau \
-    swayfx swaybg Waybar xdg-desktop-portal-wlr \
+    swayfx swaybg Waybar xdg-desktop-portal-wlr tlp \
     opendoas dbus elogind pam_rundir dhcpcd chrony polkit openssl openssl-devel pipewire mako \
     zip unzip unrar tar xz atool udiskie \
     bash git curl wget scc NetworkManager \
@@ -73,6 +73,7 @@ echo -e "\n[$] > Libraries, tools, programming languages and apps are succesfull
 echo -e "\n[$] > Enabling services...\n" &&
 SERVICE dbus &&
 SERVICE sshd &&
+SERVICE tlp &&
 SERVICE docker &&
 SERVICE dhcpcd &&
 SERVICE polkitd &&
