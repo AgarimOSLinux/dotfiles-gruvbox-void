@@ -48,7 +48,7 @@ $INST -Suyv linux linux-firmware linux-headers os-prober \
     mesa-dri mesa-dri-32bit mesa-vulkan-radeon mesa-vaapi mesa-vdpau \
     swayfx swaybg Waybar xdg-desktop-portal-wlr tlp \
     opendoas dbus elogind pam_rundir dhcpcd chrony polkit openssl openssl-devel pipewire mako \
-    zip unzip unrar tar xz atool udiskie \
+    zip unzip unrar tar xz atool udiskie scc \
     bash git curl wget scc NetworkManager \
     v4l2loopback wf-recorder \
     man-db man-pages man-pages-devel man-pages-posix \

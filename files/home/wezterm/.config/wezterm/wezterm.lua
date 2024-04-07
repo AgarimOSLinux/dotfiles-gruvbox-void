@@ -28,7 +28,7 @@ end)
 config.color_scheme = "GruvboxDark"
 config.enable_tab_bar = false
 
-config.font = wezterm.font("Iosevka NF")
+config.font = wezterm.font_with_fallback { "Iosevka NF", "Iosevka NF" }
 config.font_size = 14.0
 config.cell_width = 0.9
 
@@ -53,15 +53,14 @@ config.keys = {
   { key = "j", mods = "ALT", action = act.ActivateTabRelative(-1) },
   { key = "k", mods = "ALT", action = act.ActivateTabRelative(1) },
 
-  { key = "v", mods = "ALT", action = act.SplitVertical { domain = 'CurrentPaneDomain', args = { 'bash' } } },
-  { key = "s", mods = "ALT", action = act.SplitHorizontal { domain = 'CurrentPaneDomain', args = { 'bash' } } },
+  { key = "s", mods = "ALT", action = act.SplitVertical { domain = 'CurrentPaneDomain', args = { 'bash' } } },
+  { key = "v", mods = "ALT", action = act.SplitHorizontal { domain = 'CurrentPaneDomain', args = { 'bash' } } },
   { key = "q", mods = "ALT", action = act.CloseCurrentPane { confirm = false } },
   { key = "j", mods = "ALT|CTRL", action = act.ActivatePaneDirection 'Down' },
   { key = "k", mods = "ALT|CTRL", action = act.ActivatePaneDirection 'Up' },
   { key = "h", mods = "ALT|CTRL", action = act.ActivatePaneDirection 'Left' },
   { key = "l", mods = "ALT|CTRL", action = act.ActivatePaneDirection 'Right' },
 }
-config.pane_focus_follows_mouse = true
 -- {{ BINDINGS }} --
 
 
