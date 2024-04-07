@@ -20,8 +20,12 @@ args = [ "%f", "--outdir=build" ]
 
 [[language]]
 name = "c"
-indent = { tab-width = 4, unit = "    " }
+indent = { tab-width = 8, unit = "    " }
 
 [[language]]
 name = "cpp"
 indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "rust"
+auto-format = false

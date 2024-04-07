@@ -52,7 +52,16 @@ local act = wezterm.action
 config.keys = {
   { key = "j", mods = "ALT", action = act.ActivateTabRelative(-1) },
   { key = "k", mods = "ALT", action = act.ActivateTabRelative(1) },
+
+  { key = "v", mods = "ALT", action = act.SplitVertical { domain = 'CurrentPaneDomain', args = { 'bash' } } },
+  { key = "s", mods = "ALT", action = act.SplitHorizontal { domain = 'CurrentPaneDomain', args = { 'bash' } } },
+  { key = "q", mods = "ALT", action = act.CloseCurrentPane { confirm = false } },
+  { key = "j", mods = "ALT|CTRL", action = act.ActivatePaneDirection 'Down' },
+  { key = "k", mods = "ALT|CTRL", action = act.ActivatePaneDirection 'Up' },
+  { key = "h", mods = "ALT|CTRL", action = act.ActivatePaneDirection 'Left' },
+  { key = "l", mods = "ALT|CTRL", action = act.ActivatePaneDirection 'Right' },
 }
+config.pane_focus_follows_mouse = true
 -- {{ BINDINGS }} --
 
 

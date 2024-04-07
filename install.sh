@@ -53,7 +53,7 @@ $INST -Suyv linux linux-firmware linux-headers os-prober \
     v4l2loopback wf-recorder \
     man-db man-pages man-pages-devel man-pages-posix \
     lua clang clang-tools-extra python3 fasm \
-    lua-language-server gdb make python3-pip python3-wheel python3-requests pkg-config docker \
+    lua-language-server gdb make python3-pip python3-wheel python3-requests pkg-config docker docker-compose \
     wezterm helix fzf stow telegram-desktop mpv \
     grimshot wl-clipboard handlr brightnessctl \
     bottom tree calc ufetch bat wireproxy \
