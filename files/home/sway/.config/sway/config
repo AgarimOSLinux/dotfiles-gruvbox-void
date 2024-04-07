@@ -46,18 +46,12 @@
 
 # {{ TOUCHPAD }}
 input type:touchpad {
-    dwt enabled
+    dwt disabled
     tap enabled
     natural_scroll enabled
     middle_emulation enabled
 }
 # {{ TOUCHPAD }}
-
-# {{ MOUSE }}
-# input type:mouse {
-#     x   
-# }
-# {{ MOUSE }}
 
 # {{ LAYOUT }}
 input type:keyboard {
