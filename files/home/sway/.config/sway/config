@@ -22,6 +22,7 @@
     set $browser firefox --profile ~/.config/firefox
     set $screenshot grimshot --notify copy area
     set $games steam
+    set $launcher wofi --show run
 
     set $sound_up wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
     set $sound_down wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-
@@ -72,8 +73,9 @@ input type:keyboard {
     bindsym $mod+b exec $browser
     bindsym $mod+t exec $messenger
     bindsym $mod+z exec $reader
-    bindsym $mod+p exec $screenshot
+    bindsym $mod+p exec $launcher
     bindsym $mod+g exec $games
+    bindsym Print exec $screenshot
 
     # move focus
     bindsym $mod+$left focus left

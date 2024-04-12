@@ -53,9 +53,9 @@ config.keys = {
   { key = "j", mods = "ALT", action = act.ActivateTabRelative(-1) },
   { key = "k", mods = "ALT", action = act.ActivateTabRelative(1) },
 
-  { key = "s", mods = "ALT", action = act.SplitVertical { domain = 'CurrentPaneDomain', args = { 'bash' } } },
-  { key = "v", mods = "ALT", action = act.SplitHorizontal { domain = 'CurrentPaneDomain', args = { 'bash' } } },
-  { key = "q", mods = "ALT", action = act.CloseCurrentPane { confirm = false } },
+  { key = "s", mods = "ALT|CTRL", action = act.SplitVertical { domain = 'CurrentPaneDomain', args = { 'bash' } } },
+  { key = "v", mods = "ALT|CTRL", action = act.SplitHorizontal { domain = 'CurrentPaneDomain', args = { 'bash' } } },
+  { key = "q", mods = "ALT|CTRL", action = act.CloseCurrentPane { confirm = false } },
   { key = "j", mods = "ALT|CTRL", action = act.ActivatePaneDirection 'Down' },
   { key = "k", mods = "ALT|CTRL", action = act.ActivatePaneDirection 'Up' },
   { key = "h", mods = "ALT|CTRL", action = act.ActivatePaneDirection 'Left' },
