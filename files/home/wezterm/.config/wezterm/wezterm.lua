@@ -28,9 +28,8 @@ end)
 config.color_scheme = "GruvboxDark"
 config.enable_tab_bar = false
 
-config.font = wezterm.font_with_fallback { "Iosevka NF", "Iosevka NF" }
-config.font_size = 14.0
-config.cell_width = 0.9
+config.font = wezterm.font "Iosevka NF"
+config.font_size = 12.0
 
 config.window_background_opacity = 0.85
 config.window_padding = {
@@ -43,6 +42,8 @@ config.window_padding = {
 
 -- {{ ANIMATIONS }} --
 config.animation_fps = 1
+config.max_fps = 120
+config.prefer_egl = true
 config.cursor_blink_ease_in = 'Constant'
 config.cursor_blink_ease_out = 'Constant'
 -- {{ ANIMATIONS }} --

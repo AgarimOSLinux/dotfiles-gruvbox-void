@@ -48,7 +48,7 @@ $INST -Suyv linux linux-firmware linux-headers os-prober \
     mesa-dri mesa-dri-32bit mesa-vulkan-radeon mesa-vaapi mesa-vdpau \
     swayfx swaybg Waybar xdg-desktop-portal-wlr tlp \
     opendoas dbus elogind pam_rundir dhcpcd chrony polkit openssl openssl-devel pipewire mako \
-    zip unzip unrar tar xz atool udiskie scc \
+    zip unzip unrar tar xz p7zip atool udiskie scc \
     bash git curl wget scc NetworkManager \
     v4l2loopback wf-recorder \
     man-db man-pages man-pages-devel man-pages-posix \
@@ -62,10 +62,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |\
     sh -s -- -y --profile minimal --default-toolchain stable &&
 source "$HOME/.cargo/env" &&
 rustup component add rust-analyzer clippy rustfmt &&
-bash -c "sh <(curl -fsSL https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh)" &&
-opam init &&
-eval $(opam env) &&
-opam install ocaml-lsp-server odoc ocamlformat utop &&
+cargo install asm-lsp &&
 echo -e "\n[$] > Libraries, tools, programming languages and apps are succesfully installed!\n" &&
 
 
