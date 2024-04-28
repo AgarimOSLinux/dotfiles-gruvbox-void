@@ -1,4 +1,6 @@
 # {{ AUTORUN }}
+    exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
     exec_always mako
     exec_always pipewire
     exec_always pipewire-pulse
