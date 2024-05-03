@@ -1,4 +1,4 @@
 CompileFlags:
-  Add: [-xc, -std=c99, -Weverything, -Wall, -Wextra, -Werror, -Wreserved-identifier, -pedantic-errors, -fextended-identifiers]
+  Add: [-xc, -std=gnu99, -Weverything, -Wall, -Wextra, -Werror, -Wreserved-identifier, -pedantic-errors, -fextended-identifiers]
   Remove: -W*
   Compiler: gcc
