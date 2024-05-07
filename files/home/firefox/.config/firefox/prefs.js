@@ -96,7 +96,7 @@ user_pref("browser.tabs.inTitlebar", 0);
 user_pref("browser.tabs.tabmanager.enabled", false);
 user_pref("browser.theme.toolbar-theme", 0);
 user_pref("browser.toolbars.bookmarks.visibility", "never");
-user_pref("browser.topsites.contile.lastFetch", 1715110854);
+user_pref("browser.topsites.contile.lastFetch", 1715111152);
 user_pref("browser.translations.autoTranslate", false);
 user_pref("browser.translations.automaticallyPopup", false);
 user_pref("browser.translations.panelShown", true);

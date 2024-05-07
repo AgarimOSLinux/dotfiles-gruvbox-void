@@ -69,16 +69,16 @@ bar:
                 - ramp:
                     tag: capacity
                     items:
-                      - string: {text: , foreground: 9d0006ff, font: *icons_font}
-                      - string: {text: , foreground: 9d0006ff, font: *icons_font}
-                      - string: {text: , foreground: 9d0006ff, font: *icons_font}
-                      - string: {text: , foreground: b57614ff, font: *icons_font}
-                      - string: {text: , foreground: b57614ff, font: *icons_font}
-                      - string: {text: , foreground: b57614ff, font: *icons_font}
-                      - string: {text: , foreground: b57614ff, font: *icons_font}
-                      - string: {text: , foreground: 79740eff, font: *icons_font}
-                      - string: {text: , foreground: 79740eff, font: *icons_font}
-                      - string: {text: , foreground: 79740eff, font: *icons_font}
+                      - string: {text: , foreground: 9d0006ff, font: *icons_font, right-margin: 8}
+                      - string: {text: , foreground: 9d0006ff, font: *icons_font, right-margin: 8}
+                      - string: {text: , foreground: 9d0006ff, font: *icons_font, right-margin: 8}
+                      - string: {text: , foreground: b57614ff, font: *icons_font, right-margin: 8}
+                      - string: {text: , foreground: b57614ff, font: *icons_font, right-margin: 8}
+                      - string: {text: , foreground: b57614ff, font: *icons_font, right-margin: 8}
+                      - string: {text: , foreground: b57614ff, font: *icons_font, right-margin: 8}
+                      - string: {text: , foreground: 79740eff, font: *icons_font, right-margin: 8}
+                      - string: {text: , foreground: 79740eff, font: *icons_font, right-margin: 8}
+                      - string: {text: , foreground: 79740eff, font: *icons_font, right-margin: 8}
                 - string: {text: "{capacity}%"}
         content:
           map:
