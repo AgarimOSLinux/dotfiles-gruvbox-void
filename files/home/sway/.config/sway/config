@@ -23,7 +23,7 @@
     set $reader zathura
     set $browser firefox --profile ~/.config/firefox
     set $screenshot grimshot --notify copy area
-    set $launcher wofi --show run
+    set $launcher wmenu-run
 
     set $sound_up wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
     set $sound_down wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-
