@@ -4,26 +4,20 @@ I love Void Linux. It is **simple**, **bloatless** and **cozy**.
 
 # Showcase
 
-![Terminal (`kitty`)](showcase/terminal.png)
-![Browser (`firefox`)](showcase/browser.png)
-![Messenger (`telegram`)](showcase/messenger.png)
-![Reader (`zathura`)](showcase/reader.png)
+@W.I.P@
 
 # Apps
 
 - [x] Distro: [void](https://voidlinux.org/) because it is © ["just based"](https://youtu.be/rRFIlBIYCBY?feature=shared&t=9)
 - [x] Theme: [gruvbox](https://github.com/morhetz/gruvbox)
-- [x] Font: [bigblueterm](https://int10h.org/blog/2015/12/bigblue-terminal-oldschool-fixed-width-font/);
-- [x] WM: [swayfx](https://github.com/WillPower3309/swayfx)
+- [x] Font: [zedmono](https://www.nerdfonts.com/font-downloads);
+- [x] WM: [sway](https://swaywm.org/)
 - [x] Notifications: [mako](https://github.com/emersion/mako)
 - [x] Shell: [bash](https://www.gnu.org/software/bash) with [custom scripts](/files/home/tilde/.bashrc)
 - [x] Text Editor: [helix](https://github.com/helix-editor/helix)
-- [x] Browser: [firefox](https://www.mozilla.org/en-US/firefox/new/) with custom [user.js](/configs/firefox/.mozilla/firefox/main.main/user.js)
+- [x] Browser: [firefox](https://www.mozilla.org/en-US/firefox/new/) wildely [customized](/files/home/firefox/.config/firefox)
 - [x] Reader: [zathura](https://git.pwmt.org/pwmt/zathura)
 - [x] System Monitor: [bottom](https://github.com/ClementTsang/bottom)
-- [x] MIME: [handlr](https://github.com/chmln/handlr) instead of [xdg-open](https://portland.freedesktop.org/doc/xdg-open.html)
-
->I often switch between [kitty](https://github.com/kovidgoyal/kitty) and [alacritty](https://github.com/alacritty/alacritty) terminals because of [ligature](https://github.com/alacritty/alacritty/issues/50) and [bitmap](https://github.com/kovidgoyal/kitty/issues/97) supports accordingly. But for now, I use [wezterm](https://github.com/wez/wezterm).
 
 # Extensions
 
@@ -38,13 +32,17 @@ I love Void Linux. It is **simple**, **bloatless** and **cozy**.
 
 # Bootstraping
 
-If you want to use `install.sh` script, then you have to reinstall Void Linux from zero with `void-installer` and run it after reboot.
+If you want to use `install.sh` script, then you have to:
+1) Install Void Linux from zero with `void-installer`;
+2) Reboot after installation from `void-installer`;
+3) Clone this repository and run `./installer.sh`;
+
 Also, you are free to rewrite it to your own kind: I tried to make it as simple as for newbies-welcome.
 
 # Additionals
 
 There is not everything that I wanted to include in this bootstrap.
-To be "fully-qualified", you'll need to install [gruvbox](https://github.com/morhetz/gruvbox) themes for websites:
+To be "fully-qualified", you'll need to install [gruvbox](https://github.com/morhetz/gruvbox) themes for other, hardly reproducible apps:
 - https://t.me/addtheme/qoopdata - Telegram;
 - https://userstyles.world/style/7261/gruvbox-for-youtube - YouTube;
 - https://userstyles.world/style/4653/gruvbox-github - Github;
@@ -53,5 +51,4 @@ To be "fully-qualified", you'll need to install [gruvbox](https://github.com/mor
 # Attention
 
 If you are faced with screen flickering/tearing problem, give [this possible solution](https://ljvmiranda921.github.io/notebook/2021/09/01/linux-thinkpad-screen-flicker/) a try.
-
 >Note: `output eDP-1 modeline 695.00 2880 2928 2960 3040 1800 1803 1809 1906 +hsync -vsync`

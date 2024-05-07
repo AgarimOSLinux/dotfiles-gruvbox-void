@@ -1,5 +1,5 @@
 # {{ CUSTOM }}
-export TERM=foot
+# export TERM=foot
 export EDITOR=hx
 export VISUAL=hx
 
@@ -55,7 +55,7 @@ export XDG_VIDEOS_DIR=$HOME/documents/videos
 
 
 # {{ PATH }}
-export PATH=$XDG_DATA_HOME/applications
+export PATH=$XDG_DATA_HOME/applications:$PATH
 # {{ PATH }}
 
 

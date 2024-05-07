@@ -15,16 +15,8 @@ PS1="\n[#] \w [>] "
 
 # {{ VARIABLES }}
 source ~/.bash_profile
+source ~/.bash_aliases
 # {{ VARIABLES }}
-
-
-
-# {{ ALIASES }}
-alias py="python3"
-alias ls="ls --color"
-alias ll="ls --color -lAh"
-alias bye="doas shutdown -P now"
-# {{ ALIASES }}
 
 
 
