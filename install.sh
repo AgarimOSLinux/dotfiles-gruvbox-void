@@ -55,7 +55,7 @@ $INST -Suyv linux linux-firmware linux-headers os-prober \
     lua-language-server gdb make python3-pip python3-wheel python3-requests pkg-config docker docker-compose \
     foot helix fzf stow telegram-desktop mpv \
     grimshot wl-clipboard xdg-utils brightnessctl \
-    bottom tree calc ufetch bat wireproxy wmenu \
+    bottom tree calc ufetch bat wireproxy \
     noto-fonts-emoji \
     qt6-wayland qt5 gtk+ gtk+3 \
     firefox zathura-pdf-mupdf &&
