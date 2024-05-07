@@ -14,9 +14,9 @@ bar:
   border:
     width: 6
     color: 3c3836ff
-    left-margin: 300
-    right-margin: 300
-    top-margin: 30
+    left-margin: 33
+    right-margin: 33
+    top-margin: 33
 
   left:
     - pipewire:
