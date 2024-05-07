@@ -1,17 +1,18 @@
 anchor=top-right
-font=lilex 14px
-background-color=#282828
-text-color=#ebdbb2
-border-size=2
-border-color=#ebdbb2
-default-timeout=2000
+font=ZedMono NF 14px
+background-color=#ebdbb2
+text-color=#3c3836
+border-size=3
+margin=16,16
 
 [urgency=low]
-border-color=#ebdbb2
+border-color=#3c3836
+default-timeout=1500
 
 [urgency=normal]
-border-color=#ebdbb2
+border-color=#3c3836
+default-timeout=2000
 
 [urgency=high]
-border-color=#cc241d
+border-color=#9d0006
 default-timeout=0

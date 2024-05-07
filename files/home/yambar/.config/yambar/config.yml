@@ -57,7 +57,7 @@ bar:
   right:
     - backlight:
         name: amdgpu_bl0
-        content: [ string: {text: , font: *default_font, right-margin: 8}, string: {text: "{percent}%", right-margin: 15}]
+        content: [ string: {text: 󰌵, font: *icons_font, right-margin: 8}, string: {text: "{percent}%", right-margin: 15}]
 
     - battery:
         name: BAT0
@@ -69,16 +69,16 @@ bar:
                 - ramp:
                     tag: capacity
                     items:
-                      - string: {text: , foreground: 9d0006ff, font: *icons_font, right-margin: 8}
-                      - string: {text: , foreground: 9d0006ff, font: *icons_font, right-margin: 8}
-                      - string: {text: , foreground: 9d0006ff, font: *icons_font, right-margin: 8}
-                      - string: {text: , foreground: b57614ff, font: *icons_font, right-margin: 8}
-                      - string: {text: , foreground: b57614ff, font: *icons_font, right-margin: 8}
-                      - string: {text: , foreground: b57614ff, font: *icons_font, right-margin: 8}
-                      - string: {text: , foreground: b57614ff, font: *icons_font, right-margin: 8}
-                      - string: {text: , foreground: 79740eff, font: *icons_font, right-margin: 8}
-                      - string: {text: , foreground: 79740eff, font: *icons_font, right-margin: 8}
-                      - string: {text: , foreground: 79740eff, font: *icons_font, right-margin: 8}
+                      - string: {text: , font: *icons_font, right-margin: 23}
+                      - string: {text: , font: *icons_font, right-margin: 23}
+                      - string: {text: , font: *icons_font, right-margin: 23}
+                      - string: {text: , font: *icons_font, right-margin: 23}
+                      - string: {text: , font: *icons_font, right-margin: 23}
+                      - string: {text: , font: *icons_font, right-margin: 23}
+                      - string: {text: , font: *icons_font, right-margin: 23}
+                      - string: {text: , font: *icons_font, right-margin: 23}
+                      - string: {text: , font: *icons_font, right-margin: 23}
+                      - string: {text: , font: *icons_font, right-margin: 23}
                 - string: {text: "{capacity}%"}
         content:
           map:
@@ -90,21 +90,18 @@ bar:
               state == charging:
                 - string: {text: , foreground: 79740eff, right-margin: 8}
                 - string: {text: "{capacity}%"}
-              state == full:
-                - string: {text: , foreground: 79740eff, right-margin: 8}
-                - string: {text: "{capacity}%"}
               state == "not charging":
                 - ramp:
                     tag: capacity
                     items:
-                      - string: {text:  , foreground: 9d0006ff, font: *icons_font}
-                      - string: {text:  , foreground: 9d0006ff, font: *icons_font}
-                      - string: {text:  , foreground: 9d0006ff, font: *icons_font}
-                      - string: {text:  , foreground: b57614ff, font: *icons_font}
-                      - string: {text:  , foreground: b57614ff, font: *icons_font}
-                      - string: {text:  , foreground: b57614ff, font: *icons_font}
-                      - string: {text:  , foreground: b57614ff, font: *icons_font}
-                      - string: {text:  , foreground: 79740eff, font: *icons_font}
-                      - string: {text:  , foreground: 79740eff, font: *icons_font}
-                      - string: {text:  , foreground: 79740eff, font: *icons_font}
+                      - string: {text:  , foreground: 9d0006ff, font: *icons_font, right-margin: 15}
+                      - string: {text:  , foreground: 9d0006ff, font: *icons_font, right-margin: 15}
+                      - string: {text:  , foreground: 9d0006ff, font: *icons_font, right-margin: 15}
+                      - string: {text:  , foreground: b57614ff, font: *icons_font, right-margin: 15}
+                      - string: {text:  , foreground: b57614ff, font: *icons_font, right-margin: 15}
+                      - string: {text:  , foreground: b57614ff, font: *icons_font, right-margin: 15}
+                      - string: {text:  , foreground: b57614ff, font: *icons_font, right-margin: 15}
+                      - string: {text:  , foreground: 79740eff, font: *icons_font, right-margin: 15}
+                      - string: {text:  , foreground: 79740eff, font: *icons_font, right-margin: 15}
+                      - string: {text:  , foreground: 79740eff, font: *icons_font, right-margin: 15}
                 - string: {text: "{capacity}%"}
