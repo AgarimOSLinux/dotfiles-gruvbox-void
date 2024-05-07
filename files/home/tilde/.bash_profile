@@ -1,10 +1,10 @@
 # {{ CUSTOM }}
-export TERM=xterm-256color
+export TERM=foot
 export EDITOR=hx
 export VISUAL=hx
 
-export CC=clang
-export CXX=clang
+export CC=gcc
+export CXX=g++
 # {{ CUSTOM }}
 
 
@@ -55,7 +55,7 @@ export XDG_VIDEOS_DIR=$HOME/documents/videos
 
 
 # {{ PATH }}
-export PATH=$XDG_DATA_HOME/applications:$XDG_DATA_HOME/applications/zig:$XDG_DATA_HOME/applications/zls/bin:$PATH
+export PATH=$XDG_DATA_HOME/applications
 # {{ PATH }}
 
 
@@ -65,6 +65,3 @@ if [[ "$(tty)" == "/dev/tty1" ]]; then
     dbus-run-session sway
 fi
 # {{ TTY }}
-
-# opam configuration
-test -r /home/fidelicura/.opam/opam-init/init.sh && . /home/fidelicura/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true

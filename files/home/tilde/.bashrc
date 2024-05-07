@@ -54,16 +54,11 @@ function nedit() {
     local filepath=$(find $HOME/personal -not -path '*/.*' | fzf)
     hx "$filepath"
 }
-
-function share() {
-    doas modprobe v4l2loopback exclusive_caps=1 card_label=VirtualVideoDevice
-    wf-recorder --muxer=v4l2 --codec=rawvideo --file=/dev/video4 -x yuv420p
-}
 # {{ FUNCTIONS }}
 
 
 
 # {{ ON STARTUP }}
 clear
-# {{ ON STARTUP }}
 . "$HOME/.cargo/env"
+# {{ ON STARTUP }}
