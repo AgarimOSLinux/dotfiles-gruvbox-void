@@ -46,16 +46,15 @@ $INST -Suyv void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree &&
 $INST -Suyv linux linux-firmware linux-headers os-prober \
     mesa mesa-32bit glu glu-32bit vulkan-loader vulkan-loader-32bit \
     mesa-dri mesa-dri-32bit mesa-vulkan-radeon mesa-vaapi mesa-vdpau \
-    swayfx swaybg Waybar xdg-desktop-portal-wlr tlp \
+    sway swaybg xdg-desktop-portal-wlr tlp \
     opendoas dbus elogind pam_rundir dhcpcd chrony polkit openssl openssl-devel pipewire mako \
     zip unzip unrar tar xz p7zip atool udiskie scc \
     bash git curl wget scc NetworkManager \
-    v4l2loopback wf-recorder \
     man-db man-pages man-pages-devel man-pages-posix \
-    lua clang clang-tools-extra python3 fasm \
+    lua gcc clang-tools-extra python3 fasm \
     lua-language-server gdb make python3-pip python3-wheel python3-requests pkg-config docker docker-compose \
-    wezterm helix fzf stow telegram-desktop mpv \
-    grimshot wl-clipboard handlr brightnessctl \
+    foot helix fzf stow telegram-desktop mpv \
+    grimshot wl-clipboard xdg-utils brightnessctl \
     bottom tree calc ufetch bat wireproxy wofi \
     firefox zathura-pdf-mupdf &&
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |\
@@ -84,7 +83,6 @@ echo -e "\n[$] > Services enabled successfully!\n" &&
 
 echo -e "\n[$] > Initializing PAM and mod probing virtual webcam...\n" &&
 echo "-session   optional   pam_rundir.so" | sudo tee -a /etc/pam.d/system-login &&
-sudo modprobe v4l2loopback exclusive_caps=1 card_label=VirtualVideoDevice
 echo -e "\n[$] > PAM initialized successfully!\n" &&
 
 
@@ -100,14 +98,6 @@ echo -e "\n[$] > Ignoring 'sudo' package...\n" &&
 sudo touch /usr/share/xbps.d/ignorepkgs.conf &&
 echo "ignorepkg=sudo" | sudo tee -a /usr/share/xbps.d/ignorepkgs.conf &&
 echo -e "\n[$] > Ignored successfully!\n" &&
-
-
-
-echo -e "\n[$] > Creating symlinks...\n" &&
-sudo ln -sf $HOME/.local/share/applications/open /usr/bin/xdg-open &&
-sudo ln -sf /usr/bin/clang /usr/bin/cc &&
-sudo ln -sf /usr/bin/clang /usr/bin/cxx &&
-echo -e "\n[$] > Symlinks created successfully!\n" &&
 
 
 

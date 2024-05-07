@@ -7,7 +7,6 @@
     exec_always waybar
     exec_always udiskie
     exec_always wireproxy -c $HOME/.config/vpn/config.conf
-    exec_always $HOME/.config/sway/share.sh
 # {{ AUTORUN }}
 
 # {{ GLOBALS }}
@@ -18,12 +17,11 @@
     set $up k
     set $right l
 
-    set $terminal wezterm
+    set $terminal foot
     set $messenger telegram-desktop
     set $reader zathura
     set $browser firefox --profile ~/.config/firefox
     set $screenshot grimshot --notify copy area
-    set $games steam
     set $launcher wofi --show run
 
     set $sound_up wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
@@ -65,7 +63,7 @@ input type:keyboard {
 
 # {{ KEYBINDINGS }}
     # global
-    bindsym $mod+w kill
+    bindsym $mod+q kill
     bindsym $mod+Shift+r reload
     bindsym $mod+Shift+q exit
     floating_modifier $mod normal
@@ -135,17 +133,9 @@ input type:keyboard {
 # {{ THEME }}
     gaps inner 8
     gaps outer 8
-    corner_radius 10
 
     default_border none
     default_floating_border none
-
-    blur off
-
-    shadows on
-    shadows_on_csd off
-    shadow_blur_radius 20
-    shadow_color #0000007F
 # {{ THEME }}
 
 include /etc/sway/config.d/*
