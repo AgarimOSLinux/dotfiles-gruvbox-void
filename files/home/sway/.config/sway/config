@@ -4,7 +4,6 @@
     exec_always mako
     exec_always pipewire
     exec_always pipewire-pulse
-    exec_always waybar
     exec_always udiskie
     exec_always foot --server
     exec_always wireproxy -c $HOME/.config/vpn/config.conf
@@ -38,7 +37,7 @@
 # {{ GLOBALS }}
 
 # {{ WALLPAPER }}
-    output * bg ~/.config/bg/bg.jpg fill
+    output * bg #fbf1c7 solid_color
 # {{ WALLPAPER }}
 
 # {{ MONITOR }}
@@ -135,8 +134,12 @@ input type:keyboard {
     gaps inner 8
     gaps outer 8
 
-    default_border none
-    default_floating_border none
+    default_border pixel 3
+    default_floating_border pixel 3
+
+    client.focused #3c3836 #3c3836 #3c3836 #3c3836 #3c3836
+    client.focused_inactive #3c3836 #3c3836 #3c3836 #3c3836 #3c3836
+    client.unfocused #689d6a #689d6a #689d6a #689d6a 
 # {{ THEME }}
 
 include /etc/sway/config.d/*

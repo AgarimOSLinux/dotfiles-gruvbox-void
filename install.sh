@@ -46,7 +46,7 @@ $INST -Suyv void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree &&
 $INST -Suyv linux linux-firmware linux-headers os-prober \
     mesa mesa-32bit glu glu-32bit vulkan-loader vulkan-loader-32bit \
     mesa-dri mesa-dri-32bit mesa-vulkan-radeon mesa-vaapi mesa-vdpau \
-    sway swaybg xdg-desktop-portal-wlr tlp \
+    sway swaybg yambar xdg-desktop-portal-wlr tlp \
     opendoas dbus elogind pam_rundir dhcpcd chrony polkit openssl openssl-devel pipewire mako \
     zip unzip unrar tar xz p7zip atool udiskie scc \
     bash git curl wget scc NetworkManager \
@@ -56,6 +56,7 @@ $INST -Suyv linux linux-firmware linux-headers os-prober \
     foot helix fzf stow telegram-desktop mpv \
     grimshot wl-clipboard xdg-utils brightnessctl \
     bottom tree calc ufetch bat wireproxy wofi \
+    noto-fonts-emoji \
     firefox zathura-pdf-mupdf &&
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |\
     sh -s -- -y --profile minimal --default-toolchain stable &&
