@@ -28,6 +28,8 @@ I love Void Linux. It is **simple**, **bloatless** and **cozy**.
 - `ClearURLs`, named: `{74145f27-f039-47ce-a470-a662b129930a}.xpi`;
 - `Stylus`, named: `{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}.xpi`;
 - `Proxy Toggle`, named: `{0c3ab5c8-57ac-4ad8-9dd1-ee331517884d}.xpi`;
+- `Bitwarden Password Manager`, named: `{446900e4-71c2-419f-a6a7-df9c091e268b}.xpi`;
+- `Return Youtube Dislikes`, named: `{762f9885-5a13-4abd-9c77-433dcd38b8fd}.xpi`;
 - `Gruvbox Dark Theme`, named: `{7c4b7a20-26d8-4788-a840-71fa26d332e0}.xpi`;
 
 # Bootstraping
@@ -50,5 +52,6 @@ To be "fully-qualified", you'll need to install [gruvbox](https://github.com/mor
 
 # Attention
 
+Probably, the Firefox theme won't apply at the first boot. Just rerun it and it should be fine.
 If you are faced with screen flickering/tearing problem, give [this possible solution](https://ljvmiranda921.github.io/notebook/2021/09/01/linux-thinkpad-screen-flicker/) a try.
 >Note: `output eDP-1 modeline 695.00 2880 2928 2960 3040 1800 1803 1809 1906 +hsync -vsync`
