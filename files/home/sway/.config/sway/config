@@ -5,6 +5,7 @@
     exec_always pipewire
     exec_always pipewire-pulse
     exec_always udiskie
+    exec_always yambar
     exec_always foot --server
     exec_always wireproxy -c $HOME/.config/vpn/config.conf
 # {{ AUTORUN }}
