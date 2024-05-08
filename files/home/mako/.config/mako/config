@@ -3,15 +3,14 @@ font=ZedMono NF 14px
 background-color=#ebdbb2
 text-color=#3c3836
 border-size=3
+default-timeout=1000
 margin=16,16
 
 [urgency=low]
 border-color=#3c3836
-default-timeout=1500
 
 [urgency=normal]
 border-color=#3c3836
-default-timeout=2000
 
 [urgency=high]
 border-color=#9d0006

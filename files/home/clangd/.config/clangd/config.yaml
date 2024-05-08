@@ -1,4 +1,13 @@
 CompileFlags:
-  Add: [-xc, -std=gnu99, -Weverything, -Wall, -Wextra, -Werror, -Wreserved-identifier, -pedantic-errors, -fextended-identifiers]
+  Add: [
+    -xc, -std=gnu11,
+    -Wall, -Wextra, -Werror,
+    -Wshadow, -Wunder, -Wunreachable-code,
+    -Wpointer-aritch, -Wcast-align, -Wcast-qual,
+    -Wstrict-prototypes, -Wstrict-overflow=5,
+    -Wwrite-strings, -Wconversion,
+    -Wswitch-default, -Wswitch-enum,
+    -Wuninitialized, -Winit-self
+    ]
   Remove: -W*
   Compiler: gcc

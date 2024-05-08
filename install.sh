@@ -51,11 +51,13 @@ $INST -Suyv linux linux-firmware linux-headers os-prober \
     zip unzip unrar tar xz p7zip atool udiskie scc \
     bash git curl wget scc NetworkManager \
     man-db man-pages man-pages-devel man-pages-posix \
-    lua gcc clang-tools-extra python3 fasm \
+    lua gcc clang clang-tools-extra lldb python3 cmake libstdc++-devel \
     lua-language-server gdb make python3-pip python3-wheel python3-requests pkg-config docker docker-compose \
+    libunwind-devel libtool \
+    pkgconf \
     foot helix fzf stow telegram-desktop mpv \
     grimshot wl-clipboard xdg-utils brightnessctl \
-    bottom tree calc ufetch bat wireproxy fuzzel \
+    bottom coreutils autoconf automake calc ufetch bat wireproxy fuzzel \
     noto-fonts-emoji \
     qt6-wayland qt5 gtk+ gtk+3 \
     firefox zathura-pdf-mupdf &&

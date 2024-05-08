@@ -1,9 +1,15 @@
 theme = "gruvbox_light"
 
 [editor]
-line-number = "relative"
 mouse = false
 rulers = [80]
+true-color = true
+popup-border = "all"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+snippets = false
 
 [editor.cursor-shape]
 insert = "bar"

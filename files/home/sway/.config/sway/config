@@ -1,5 +1,7 @@
 # {{ AUTORUN }}
     exec dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+    exec wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 45%
+    exec wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SOURCE@ 80%
 
     exec_always mako
     exec_always pipewire
@@ -53,12 +55,13 @@ input type:touchpad {
     natural_scroll enabled
     middle_emulation enabled
 }
+seat seat0 xcursor_theme capitaine 28
 # {{ TOUCHPAD }}
 
 # {{ LAYOUT }}
 input type:keyboard {
     xkb_layout us,ru
-    xkb_options grp:win_space_toggle
+    xkb_options grp:alt_shift_toggle
 }
 # {{ LAYOUT }}
 
