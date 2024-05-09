@@ -207,6 +207,7 @@ stower() {
 
     cd files/
     stow -t $HOME/ */
+    fc-cache -f -v
 }
 
 # ███    ███  █████  ██ ███    ██ 
