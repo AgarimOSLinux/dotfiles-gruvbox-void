@@ -5,7 +5,9 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
-read -p "[\$] > Username: " $WORK_USER
+read -p "[\$] > Username (OS): " $WORK_USER_NAME
+read -p "[\$] > Username (GIT): " $WORK_USER_NAME_GIT
+read -p "[\$] > Email (GIT): " $WORK_USER_EMAIL_GIT
 
 #  █████  ██      ██  █████  ███████ ███████ ███████ 
 # ██   ██ ██      ██ ██   ██ ██      ██      ██      
@@ -72,6 +74,8 @@ declare -a SYSTEM_PKGS=(
     xdg-desktop-portal-kde
     # xdg
     xdg-utils xdg-user-dirs
+    # secrets
+    libsecret
 )
 
 declare -a DESKTOP_PKGS=(
@@ -170,7 +174,13 @@ packages() {
 }
 
 rights() {
-    sudo usermod -aG audio,video,network,input,plugdev $WORK_USER
+    sudo usermod -aG audio,video,network,input,plugdev $WORK_USER_NAME
+}
+
+credentials() {
+    git config --global user.email "$WORK_USER_EMAIL_GIT"
+    git config --global user.name "$WORK_USER_NAME_GIT"
+    git config --global credential.helper libsecret
 }
 
 hierarchy() {
@@ -184,9 +194,9 @@ hierarchy() {
 }
 
 stow() {
-    rm -f /home/$WORK_USER/.bashrc
-    rm -f /home/$WORK_USER/.bash_profile
-    rm -f /home/$WORK_USER/.profile
+    rm -f /home/$WORK_USER_NAME/.bashrc
+    rm -f /home/$WORK_USER_NAME/.bash_profile
+    rm -f /home/$WORK_USER_NAME/.profile
 
     cd ../files/home/
     stow -t $HOME */
