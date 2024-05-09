@@ -48,7 +48,7 @@ map b toggle_statusbar
 
 
 # {{ OPTIONS }}
-set font "ZedMono NFM 12"
+set font "Noto Sans Mono 12"
 
 set adjust-open "best-fit"
 set pages-per-row 1

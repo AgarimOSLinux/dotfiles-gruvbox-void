@@ -1,5 +1,5 @@
-default_font: &default_font ZedMono NFM Medium:pixelsize=38
-icons_font: &icons_font ZedMono NF:pixelsize=38
+default_font: &default_font Noto Sans Mono:pixelsize=38
+icons_font: &icons_font Noto Sans:pixelsize=38
 
 bar:
   height: 50

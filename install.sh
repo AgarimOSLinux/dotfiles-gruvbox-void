@@ -208,6 +208,7 @@ stower() {
     cd files/
     stow -t $HOME/ */
     fc-cache -f -v
+    xdg-user-dirs-update
 }
 
 # ███    ███  █████  ██ ███    ██ 
