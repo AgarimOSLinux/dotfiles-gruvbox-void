@@ -1,6 +1,6 @@
 CompileFlags:
   Add: [
-    -xc, -std=gnu11,
+    -xc, -std=c89,
     -Wall, -Wextra, -Werror,
     -Wshadow, -Wunder, -Wunreachable-code,
     -Wpointer-aritch, -Wcast-align, -Wcast-qual,
@@ -10,4 +10,4 @@ CompileFlags:
     -Wuninitialized, -Winit-self
     ]
   Remove: -W*
-  Compiler: gcc
+  Compiler: clang

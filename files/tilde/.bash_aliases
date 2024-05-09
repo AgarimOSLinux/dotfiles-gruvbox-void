@@ -1,6 +1,3 @@
-alias ls="ls --color"
-alias ll="ls --color -lAh"
-
 alias gs="git status";
 alias gc="git commit";
 alias gca="git add -A && git commit";
@@ -12,6 +9,9 @@ alias gco="git checkout";
 alias gf="git fetch";
 alias gm="git merge";
 
-alias py="python3"
+alias ls="ls --color"
+alias ll="ls --color -lAh"
 
+alias top="btm -b"
+alias py="python3"
 alias bye="doas shutdown -P now"
