@@ -1,0 +1,3 @@
+- add user-asking git config
+- add 2d list processing for packages
+- add qutebrowser config
