@@ -1,13 +1,19 @@
 #!/bin/bash
 
-if [ "$EUID" -ne 0 ]; then
-    echo -e "[\$] > Rerun as root!"
+if [ "$EUID" -eq 0 ]; then
+    echo "[\$] > Nope, no root run!"
     exit
 fi
 
-read -p "[\$] > Username (OS): " $WORK_USER_NAME
-read -p "[\$] > Username (GIT): " $WORK_USER_NAME_GIT
-read -p "[\$] > Email (GIT): " $WORK_USER_EMAIL_GIT
+if [ -n "$SUDO_COMMAND" ]; then
+    ROOT_CMD=sudo
+else
+    ROOT_CMD=doas
+fi
+
+read -p "[\$] > Username (OS): " WORK_USER_NAME
+read -p "[\$] > Username (GIT): " WORK_USER_NAME_GIT
+read -p "[\$] > Email (GIT): " WORK_USER_EMAIL_GIT
 sleep 3
 
 #  █████  ██      ██  █████  ███████ ███████ ███████ 
@@ -16,8 +22,8 @@ sleep 3
 # ██   ██ ██      ██ ██   ██      ██ ██           ██ 
 # ██   ██ ███████ ██ ██   ██ ███████ ███████ ███████ 
 
-PKGS_INSTALL="xbps-install"
-PKGS_REMOVE="xbps-remove"
+PKGS_INSTALL="$ROOT_CMD xbps-install"
+PKGS_REMOVE="$ROOT_CMD xbps-remove"
 
 # ██      ██ ███████ ████████ ███████ 
 # ██      ██ ██         ██    ██      
@@ -142,7 +148,7 @@ declare -a SERVICES_LIST=(
 
 _service() {
     local service_name="$@";
-    sudo ln -sf /etc/sv/$service_name /var/service/
+    $ROOT_CMD ln -sf /etc/sv/$service_name /var/service/
 }
 
 services() {
@@ -150,7 +156,7 @@ services() {
         _service "$i"
     done
 
-    echo "-session   optional   pam_rundir.so" | tee -a /etc/pam.d/system-login
+    echo "-session   optional   pam_rundir.so" | $ROOT_CMD tee -a /etc/pam.d/system-login
 }
 
 _packages() {
@@ -160,9 +166,9 @@ _packages() {
     PKGS_INSTALL_LIST+=("${DESKTOP_PKGS[@]}")
     PKGS_INSTALL_LIST+=("${ENV_PKGS[@]}")
 
-    touch /usr/share/xbps.d/ignorepkgs.conf
+    $ROOT_CMD touch /usr/share/xbps.d/ignorepkgs.conf
     for pkg in "${PKGS_REMOVE_LIST[@]}"; do
-        echo "ignorepkg=$pkg" | tee -a /usr/share/xbps.d/ignorepkgs.conf
+        echo "ignorepkg=$pkg" | $ROOT_CMD tee -a /usr/share/xbps.d/ignorepkgs.conf
     done
 }
 
@@ -177,7 +183,7 @@ packages() {
 }
 
 rights() {
-    usermod -aG audio,video,network,input,plugdev "$WORK_USER_NAME"
+    $ROOT_CMD usermod -aG audio,video,network,input,plugdev "$WORK_USER_NAME"
 }
 
 credentials() {
@@ -197,11 +203,12 @@ hierarchy() {
 }
 
 stower() {
-    rm -f /home/$WORK_USER_NAME/.bashrc
-    rm -f /home/$WORK_USER_NAME/.bash_profile
-    rm -f /home/$WORK_USER_NAME/.profile
+    rm -f $HOME/.bashrc
+    rm -f $HOME/.bash_profile
+    rm -f $HOME/.profile
 
-    stow -t /home/$WORK_USER_NAME */
+    cd files/
+    stow -t $HOME/ */
 }
 
 # ███    ███  █████  ██ ███    ██ 
