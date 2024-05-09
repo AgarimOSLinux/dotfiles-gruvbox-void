@@ -23,7 +23,7 @@
     set $terminal foot
     set $messenger telegram-desktop
     set $reader zathura
-    set $browser qutebrowser
+    set $browser firefox
     set $screenshot grimshot --notify copy area
     set $launcher fuzzel
 

@@ -116,7 +116,7 @@ declare -a ENV_PKGS=(
     # editor
     helix
     # browser
-    qutebrowser
+    firefox
     # messenger
     telegram-desktop
     # virtualization

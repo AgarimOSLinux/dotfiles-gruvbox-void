@@ -1,1 +1,2 @@
-- add qutebrowser config
+- sway status bar
+- firefox config
