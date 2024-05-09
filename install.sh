@@ -194,8 +194,6 @@ credentials() {
 
 hierarchy() {
     mkdir -p $HOME/.config/vpn
-    mkdir -p $HOME/.config/firefox
-    mkdir -p $HOME/.config/firefox/extensions
     mkdir -p $HOME/.local/share/fonts
     mkdir -p $HOME/.local/share/icons
     mkdir -p $HOME/.local/share/themes
