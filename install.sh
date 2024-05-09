@@ -1,13 +1,14 @@
 #!/bin/bash
 
 if [ "$EUID" -ne 0 ]; then
-    echo -e "[\$] > Rerun as root!\n"
+    echo -e "[\$] > Rerun as root!"
     exit
 fi
 
 read -p "[\$] > Username (OS): " $WORK_USER_NAME
 read -p "[\$] > Username (GIT): " $WORK_USER_NAME_GIT
 read -p "[\$] > Email (GIT): " $WORK_USER_EMAIL_GIT
+sleep 3
 
 #  █████  ██      ██  █████  ███████ ███████ ███████ 
 # ██   ██ ██      ██ ██   ██ ██      ██      ██      
@@ -15,8 +16,8 @@ read -p "[\$] > Email (GIT): " $WORK_USER_EMAIL_GIT
 # ██   ██ ██      ██ ██   ██      ██ ██           ██ 
 # ██   ██ ███████ ██ ██   ██ ███████ ███████ ███████ 
 
-alias PKGS_INSTALL="xbps-install"
-alias PKGS_REMOVE="xbps-remove"
+PKGS_INSTALL="xbps-install"
+PKGS_REMOVE="xbps-remove"
 
 # ██      ██ ███████ ████████ ███████ 
 # ██      ██ ██         ██    ██      
@@ -46,7 +47,7 @@ declare -a DEV_PKGS=(
     # tools
     make cmake lldb
     clang-tools-extra
-    diff patch libtool
+    patch libtool
     pkgconf autoconf automake
     python3-pip python3-wheel
     # libraries
@@ -112,6 +113,8 @@ declare -a ENV_PKGS=(
     qutebrowser
     # messenger
     telegram-desktop
+    # virtualization
+    docker docker-compose
     # vpn
     wireproxy
     # utilities
@@ -165,16 +168,16 @@ _packages() {
 
 packages() {
     _packages
-    PKGS_INSTALL -Su
-    PKGS_INSTALL -Suyv "${REPOS_PKGS[@]}"
-    PKGS_INSTALL -Suy "${PKGS_INSTALL_LIST[@]}"
-    PKGS_REMOVE -ROoy "${PKGS_REMOVE_LIST[@]}"
+    $PKGS_INSTALL -Su
+    $PKGS_INSTALL -Suyv "${REPOS_PKGS[@]}"
+    $PKGS_INSTALL -Suy "${PKGS_INSTALL_LIST[@]}"
+    $PKGS_REMOVE -ROoy "${PKGS_REMOVE_LIST[@]}"
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |\
         sh -s -- -y --profile complete --default-toolchain stable
 }
 
 rights() {
-    sudo usermod -aG audio,video,network,input,plugdev $WORK_USER_NAME
+    usermod -aG audio,video,network,input,plugdev "$WORK_USER_NAME"
 }
 
 credentials() {
@@ -193,16 +196,12 @@ hierarchy() {
     mkdir -p $HOME/.local/share/applications
 }
 
-stow() {
+stower() {
     rm -f /home/$WORK_USER_NAME/.bashrc
     rm -f /home/$WORK_USER_NAME/.bash_profile
     rm -f /home/$WORK_USER_NAME/.profile
 
-    cd ../files/home/
-    stow -t $HOME */
-    
-    cd ../assets/
-    stow -t $HOME */
+    stow -t /home/$WORK_USER_NAME */
 }
 
 # ███    ███  █████  ██ ███    ██ 
@@ -216,7 +215,7 @@ main() {
     rights
     packages
     services
-    stow
+    stower
 }
 
 main
