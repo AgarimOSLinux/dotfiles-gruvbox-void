@@ -23,7 +23,7 @@
     set $terminal foot
     set $messenger telegram-desktop
     set $reader zathura
-    set $browser firefox --profile ~/.config/firefox
+    set $browser qutebrowser
     set $screenshot grimshot --notify copy area
     set $launcher fuzzel
 
