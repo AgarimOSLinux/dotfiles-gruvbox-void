@@ -1,0 +1,8 @@
+window {
+  background-image: url("~/.config/bg/bg_raw.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Noto Sans Mono";
+  color: #D3C6AA;
+}

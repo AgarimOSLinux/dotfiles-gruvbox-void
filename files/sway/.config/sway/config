@@ -25,6 +25,7 @@
     set $browser firefox
     set $screenshot grimshot --notify copy area
     set $launcher fuzzel
+    set $locker gtklock -d
 
     set $sound_up wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
     set $sound_down wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-
@@ -39,7 +40,7 @@
 # {{ GLOBALS }}
 
 # {{ WALLPAPER }}
-    output * bg ~/.config/bg/bg.png fill
+    output * bg ~/.config/bg/bg_raw.png fill
 # {{ WALLPAPER }}
 
 # {{ MONITOR }}
@@ -78,6 +79,7 @@ input type:keyboard {
     bindsym $mod+z exec $reader
     bindsym $mod+p exec $launcher
     bindsym $mod+g exec $games
+    bindsym $mod+l exec $locker
     bindsym Print exec $screenshot
 
     # move focus
@@ -165,7 +167,7 @@ bar {
         statusline #ebdbb2
         background #282828
         focused_workspace #d65d0e #282828 #ebdbb2
-        inactive_workspace #00000000 #282828 #ebdbb2
+        inactive_workspace #282828 #282828 #ebdbb2
     }
 }
 # {{ BAR }}

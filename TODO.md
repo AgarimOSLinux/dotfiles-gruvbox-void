@@ -1,2 +1,3 @@
 - sway status bar
 - firefox config
+- gtklock
