@@ -37,7 +37,9 @@ I love Void Linux. It is **simple**, **bloatless** and **cozy**.
 If you want to use `install.sh` script, then you have to:
 1) Install Void Linux from zero with `void-installer`;
 2) Reboot after installation from `void-installer`;
-3) Clone this repository and run `./installer.sh`;
+3) Clone this repository and run `./install.sh`;
+4) On the started firefox profile manager instance, choose "create new profile" and choose the `main.main` folder;
+5) Got it!
 
 Also, you are free to rewrite it to your own kind: I tried to make it as simple as for newbies-welcome.
 
