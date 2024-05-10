@@ -56,6 +56,7 @@ declare -a DEV_PKGS=(
     patch libtool
     pkgconf autoconf automake
     python3-pip python3-wheel
+    just
     # libraries
     libstdc++-devel libunwind-devel
     openssl-devel
