@@ -198,8 +198,7 @@ hierarchy() {
     mkdir -p $HOME/.mozilla/firefox/main.main/extensions
     mkdir -p $HOME/.mozilla/firefox/main.main/chrome
 
-    distributions=$(whereis firefox)
-    mkdir -p $distributions/distribution
+    $ROOT_CMD mkdir -p /usr/lib/firefox/distribution
 }
 
 stower() {
@@ -211,6 +210,7 @@ stower() {
     stow -t $HOME/ */
     fc-cache -f -v
     xdg-user-dirs-update
+    $ROOT_CMD cp .policies.json /usr/lib/firefox/policies.json
     firefox --ProfileManager
 }
 
@@ -230,11 +230,10 @@ main() {
 
 if [ "$#" -gt 0 ]; then
     hierarchy
-    distributions=$(whereis firefox)/distribution
-    mkdir -p $distributions
+    $ROOT_CMD mkdir -p /usr/lib/firefox/distribution
     cd files/
+    $ROOT_CMD cp .policies.json /usr/lib/firefox/distribution/policies.json
     stow -t $HOME/ */
-    cp .policies.json $distributions/policies.json
     fc-cache -f -v
     xdg-user-dirs-update
 else

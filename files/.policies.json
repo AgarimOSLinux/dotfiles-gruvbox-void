@@ -7,7 +7,6 @@
     "DisableFirefoxAccounts": true,
     "DisableAccounts": true,
     "DisableFormHistory": true,
-    "DisableBookmarsToolbar": true,
     "PasswordManagerEnabled": false,
     "OverrideFirstRunPage": "",
     "OverridePostUpdatePage": "",
@@ -26,47 +25,57 @@
     "ExtensionUpdate": true,
     "ExtensionSettings": {
       "*": {
-        "installation_mode" = "blocked"
+        "installation_mode": "blocked"
       },
       "uBlock0@raymondhill.net": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
-        "installation_mode": "force_installed"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi",
+        "installation_mode": "force_installed",
+        "default_area": "menupanel",
+        "permissions": [ "internal:privateBrowsingAllowed" ]
       },
       "adblockultimate@adblockultimate.net": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/adblocker-ultimate/latest.xpi"
-        "installation_mode": "force_installed"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/adblocker-ultimate/latest.xpi",
+        "installation_mode": "force_installed",
+        "default_area": "menupanel"
       },
       "firefox@ghostery.com": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ghostery/latest.xpi"
-        "installation_mode": "force_installed"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ghostery/latest.xpi",
+        "installation_mode": "force_installed",
+        "default_area": "menupanel"
       },
       "jid1-MnnxcxisBPnSXQ@jetpack": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger/latest.xpi"
-        "installation_mode": "force_installed"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/privacy-badger17/latest.xpi",
+        "installation_mode": "force_installed",
+        "default_area": "menupanel"
       },
       "{74145f27-f039-47ce-a470-a662b129930a}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/clearurls/latest.xpi"
-        "installation_mode": "force_installed"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/clearurls/latest.xpi",
+        "installation_mode": "force_installed",
+        "default_area": "menupanel"
       },
       "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/styl-us/latest.xpi"
-        "installation_mode": "force_installed"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/styl-us/latest.xpi",
+        "installation_mode": "force_installed",
+        "default_area": "menupanel"
       },
       "{0c3ab5c8-57ac-4ad8-9dd1-ee331517884d}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/proxy-toggle/latest.xpi"
-        "installation_mode": "force_installed"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/proxy-toggle/latest.xpi",
+        "installation_mode": "force_installed",
+        "default_area": "navbar"
       },
-      "{7c4b7a20-26d8-4788-a840-71fa26d332e0}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/gruvbox-dark-theme/latest.xpi"
+      "{eb8c4a94-e603-49ef-8e81-73d3c4cc04ff}": {
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/gruvbox-dark-theme/latest.xpi",
         "installation_mode": "force_installed"
       },
       "{446900e4-71c2-419f-a6a7-df9c091e268b}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi"
-        "installation_mode": "force_installed"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi",
+        "installation_mode": "force_installed",
+        "default_area": "navbar"
       },
       "{762f9885-5a13-4abd-9c77-433dcd38b8fd}": {
-        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/return-youtube-dislikes/latest.xpi"
-        "installation_mode": "force_installed"
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/return-youtube-dislikes/latest.xpi",
+        "installation_mode": "force_installed",
+        "default_area": "menupanel"
       }
     },
     "UserMessaging": {
