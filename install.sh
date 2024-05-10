@@ -11,11 +11,6 @@ else
     ROOT_CMD=doas
 fi
 
-read -p "[\$] > Username (OS): " WORK_USER_NAME
-read -p "[\$] > Username (GIT): " WORK_USER_NAME_GIT
-read -p "[\$] > Email (GIT): " WORK_USER_EMAIL_GIT
-sleep 3
-
 #  █████  ██      ██  █████  ███████ ███████ ███████ 
 # ██   ██ ██      ██ ██   ██ ██      ██      ██      
 # ███████ ██      ██ ███████ ███████ █████   ███████ 
@@ -202,6 +197,9 @@ hierarchy() {
     mkdir -p $HOME/.local/share/applications
     mkdir -p $HOME/.mozilla/firefox/main.main/extensions
     mkdir -p $HOME/.mozilla/firefox/main.main/chrome
+
+    distributions=$(whereis firefox)
+    mkdir -p $distributions/distribution
 }
 
 stower() {
@@ -230,4 +228,19 @@ main() {
     stower
 }
 
-main
+if [ "$#" -gt 0 ]; then
+    hierarchy
+    distributions=$(whereis firefox)/distribution
+    mkdir -p $distributions
+    cd files/
+    stow -t $HOME/ */
+    cp .policies.json $distributions/policies.json
+    fc-cache -f -v
+    xdg-user-dirs-update
+else
+    read -p "[\$] > Username (OS): " WORK_USER_NAME
+    read -p "[\$] > Username (GIT): " WORK_USER_NAME_GIT
+    read -p "[\$] > Email (GIT): " WORK_USER_EMAIL_GIT
+    sleep 3
+    main
+fi
