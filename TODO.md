@@ -1,3 +1,3 @@
 - sway status bar
 - firefox config
-- gtklock
+- telegram theme
