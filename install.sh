@@ -127,7 +127,7 @@ declare -a ENV_PKGS=(
     # utilities
     coreutils findutils diffutils
     fzf stow bottom calc ufetch
-    curl wget git
+    curl wget git-libsecret
 )
 
 declare -a PKGS_INSTALL_LIST=()
@@ -191,7 +191,6 @@ rights() {
 credentials() {
     git config --global user.email "$WORK_USER_EMAIL_GIT"
     git config --global user.name "$WORK_USER_NAME_GIT"
-    git config --global credential.helper libsecret
 }
 
 hierarchy() {
