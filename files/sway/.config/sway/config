@@ -154,4 +154,20 @@ input type:keyboard {
     client.urgent           $bg-urgent    $bg-urgent   $text          $bar $bar
 # {{ THEME }}
 
+# {{ BAR }}
+bar {
+    position top
+    tray_output none
+
+    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+
+    colors {
+        statusline #ebdbb2
+        background #282828
+        focused_workspace #d65d0e #282828 #ebdbb2
+        inactive_workspace #00000000 #282828 #ebdbb2
+    }
+}
+# {{ BAR }}
+
 include /etc/sway/config.d/*

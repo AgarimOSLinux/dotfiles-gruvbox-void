@@ -32,9 +32,20 @@ export XKB_DEFAULT_LAYOUT=us
 # {{ WAYLAND }}
 
 
+
 # {{ PATH }}
 export PATH=$XDG_DATA_HOME/applications:$PATH
 # {{ PATH }}
+
+
+
+# {{ LANGUAGES }}
+. "$HOME/.cargo/env"
+
+export ZVM_INSTALL="$HOME/.zvm/self"
+export PATH="$PATH:$HOME/.zvm/bin"
+export PATH="$PATH:$ZVM_INSTALL/"
+# {{ LANGUAGES }}
 
 
 
@@ -43,5 +54,3 @@ if [[ "$(tty)" == "/dev/tty1" ]]; then
     dbus-run-session sway
 fi
 # {{ TTY }}
-. "$HOME/.cargo/env"
-# export XDG_RUNTIME_DIR=/run/user/$(id -u)

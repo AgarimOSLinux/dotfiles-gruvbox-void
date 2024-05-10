@@ -108,6 +108,7 @@ declare -a DESKTOP_PKGS=(
     # fonts
     noto-fonts-ttf-extra
     noto-fonts-emoji
+    font-awesome
 )
 
 declare -a ENV_PKGS=(
@@ -178,6 +179,7 @@ packages() {
     $PKGS_INSTALL -Suyv "${REPOS_PKGS[@]}"
     $PKGS_INSTALL -Suy "${PKGS_INSTALL_LIST[@]}"
     $PKGS_REMOVE -ROoy "${PKGS_REMOVE_LIST[@]}"
+    curl https://raw.githubusercontent.com/tristanisham/zvm/master/install.sh | bash
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs |\
         sh -s -- -y --profile complete --default-toolchain stable
 }
