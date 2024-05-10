@@ -195,7 +195,6 @@ hierarchy() {
     mkdir -p $HOME/.local/share/icons
     mkdir -p $HOME/.local/share/themes
     mkdir -p $HOME/.local/share/applications
-    mkdir -p $HOME/.mozilla/firefox/main.main/extensions
     mkdir -p $HOME/.mozilla/firefox/main.main/chrome
 
     $ROOT_CMD mkdir -p /usr/lib/firefox/distribution

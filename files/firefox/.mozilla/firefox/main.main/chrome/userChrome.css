@@ -137,3 +137,12 @@
 
 /*  Removes the annoying rainbow thing from the hamburger  */
 #appMenu-fxa-separator{border-image:none !important;}
+
+/* Removes all tabs thing from bar */
+#tabbrowser-tabs:not([overflow="true"]) ~ #alltabs-button {
+    display: none !important;
+}
+
+#TabsToolbar #firefox-view-button {
+    display: none !important;
+}
