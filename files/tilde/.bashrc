@@ -33,7 +33,7 @@ function bashclear() {
 function nsync() {
     local stamp="$(date +'%Y-%m-%d')"
 
-    pushd $HOME/personal
+    pushd $HOME/Documents/Personal
 
     git add . &&
     git commit -m "[script] $stamp" &&
@@ -43,7 +43,7 @@ function nsync() {
 }
 
 function nedit() {
-    local filepath=$(find $HOME/personal -not -path '*/.*' | fzf)
+    local filepath=$(find $HOME/Documents/Personal -not -path '*/.*' | fzf)
     hx "$filepath"
 }
 # {{ FUNCTIONS }}
