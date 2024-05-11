@@ -3,8 +3,8 @@ export TERM=foot
 export EDITOR=hx
 export VISUAL=hx
 
-export CC=gcc
-export CXX=g++
+export CC=clang
+export CXX=clang
 # {{ CUSTOM }}
 
 
