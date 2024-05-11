@@ -49,7 +49,7 @@ There is not everything that I wanted to include in this bootstrap.
 To be "fully-qualified", you'll need to install [gruvbox](https://github.com/morhetz/gruvbox) themes for other, hardly reproducible apps:
 - https://t.me/addtheme/qoopdata - Telegram;
 - https://userstyles.world/style/7261/gruvbox-for-youtube - YouTube;
-- https://userstyles.world/style/4653/gruvbox-github - Github;
+- https://userstyles.world/style/15463/github-gruvbox-extended - Github;
 - https://userstyles.world/style/2326/discord-gruvbox - Discord;
 
 # Attention
