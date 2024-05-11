@@ -1,2 +1,0 @@
-- sway status bar
-- telegram theme
