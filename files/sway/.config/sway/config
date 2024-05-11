@@ -160,7 +160,7 @@ bar {
     position top
     tray_output none
 
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command ~/.config/sway/info.sh
 
     colors {
         statusline #ebdbb2

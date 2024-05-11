@@ -70,6 +70,8 @@ declare -a SYSTEM_PKGS=(
     chrony
     # network
     dhcpcd
+    # battery
+    upower
     # layers
     xdg-desktop-portal
     xdg-desktop-portal-wlr
