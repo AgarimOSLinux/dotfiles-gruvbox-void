@@ -5,7 +5,7 @@ if [ "$EUID" -eq 0 ]; then
     exit
 fi
 
-if [ -n "$SUDO_COMMAND" ]; then
+if command -v sudo &> /dev/null; then
     ROOT_CMD=sudo
 else
     ROOT_CMD=doas
@@ -81,6 +81,8 @@ declare -a SYSTEM_PKGS=(
     xdg-utils xdg-user-dirs
     # secrets
     libsecret
+    # root
+    opendoas
 )
 
 declare -a DESKTOP_PKGS=(
@@ -147,12 +149,12 @@ declare -a SERVICES_LIST=(
 
 _service() {
     local service_name="$@";
-    $ROOT_CMD ln -sf /etc/sv/$service_name /var/service/
+    $ROOT_CMD ln -s /etc/sv/"$service_name" /var/service/
 }
 
 services() {
-    for i in "${SRVC_LIST[@]}"; do
-        _service "$i"
+    for serv in "${SERVICES_LIST[@]}"; do
+        _service $serv
     done
 
     echo "-session   optional   pam_rundir.so" | $ROOT_CMD tee -a /etc/pam.d/system-login
@@ -211,7 +213,8 @@ stower() {
     stow -t $HOME/ */
     fc-cache -f -v
     xdg-user-dirs-update
-    $ROOT_CMD cp .policies.json /usr/lib/firefox/policies.json
+    doas cp .policies.json /usr/lib/firefox/policies.json
+    sway
     firefox --ProfileManager
 }
 
