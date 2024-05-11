@@ -44,11 +44,11 @@ declare -a HARDWARE_PKGS=(
 
 declare -a DEV_PKGS=(
     # languages
-    clang python3
+    gcc clang python3
     # tools
-    make cmake lldb
+    make cmake lldb gdb
     clang-tools-extra
-    patch libtool
+    patch libtool lld mold
     pkgconf autoconf automake
     python3-pip python3-wheel
     just

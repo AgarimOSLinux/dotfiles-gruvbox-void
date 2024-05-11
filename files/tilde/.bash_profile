@@ -2,9 +2,6 @@
 export TERM=foot
 export EDITOR=hx
 export VISUAL=hx
-
-export CC=clang
-export CXX=clang
 # {{ CUSTOM }}
 
 
