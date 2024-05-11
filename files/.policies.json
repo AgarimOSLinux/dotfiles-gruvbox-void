@@ -16,6 +16,9 @@
     "PromptForDownloadLocation": false,
     "SearchBar": "unified",
     "SearchSuggestEnabled": false,
+    "SearchEngines": {
+      "Default": "duckduckgo"
+    },
     "EnableTrackingProtection": {
       "Value": true,
       "Locked": true,

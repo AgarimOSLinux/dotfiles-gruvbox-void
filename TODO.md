@@ -1,3 +1,2 @@
 - sway status bar
-- firefox config
 - telegram theme
