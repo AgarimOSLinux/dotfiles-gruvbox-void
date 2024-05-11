@@ -1,6 +1,6 @@
 CompileFlags:
   Add: [
-    -xc, -std=c89,
+    -xc, -std=c99,
     -Wall, -Wextra, -Werror,
     -Wshadow, -Wunder, -Wunreachable-code,
     -Wpointer-aritch, -Wcast-align, -Wcast-qual,

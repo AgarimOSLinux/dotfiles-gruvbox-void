@@ -105,6 +105,8 @@ declare -a DESKTOP_PKGS=(
     pipewire
     # network
     NetworkManager
+    # reader
+    zathura-pdf-mupdf
     # fonts
     noto-fonts-ttf-extra
     noto-fonts-emoji
